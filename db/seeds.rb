@@ -99,7 +99,7 @@ stc = Organization.new(
   ",
   location: "Berlin",
   website: "www.savethechildren.de",
-  opening_times: "24 hours",
+  opening_time: "24 hours",
   user_id: toni.id
 )
 stc.save!
@@ -115,7 +115,7 @@ oxfam = Organization.new(
   for their actions that impact the poor and vulnerable.",
   location: "USA",
   website: "www.oxfam.org/en",
-  opening_times: "From 8h to 18h",
+  opening_time: "From 8h to 18h",
   user_id: alexander.id
 )
 oxfam.save!
@@ -132,7 +132,7 @@ dwb = Organization.new(
   vulnerable populations.",
   location: "Berlin",
   website: "www.doctorswithoutborders.org",
-  opening_times: "From monday to thursday, 10h to 16h",
+  opening_time: "From monday to thursday, 10h to 16h",
   user_id: jonas.id
 )
 dwb.save!
@@ -149,7 +149,7 @@ brac = Organization.new(
   people to lift themselves out of poverty and to build more inclusive and resilient societies.",
   location: "Berlin",
   website: "www.bracinternational.org",
-  opening_times: "Usually in the morning",
+  opening_time: "Usually in the morning",
   user_id: manuel.id
 )
 brac.save!
@@ -166,7 +166,7 @@ wv = Organization.new(
   sustainable, long-term solutions to poverty that will help children and their communities thrive.",
   location: "Berlin",
   website: "www.worldvision.de",
-  opening_times: "It depends",
+  opening_time: "It depends",
   user_id: tulio.id
 )
 wv.save!
@@ -180,7 +180,7 @@ wv_offer = Offer.new(
   start_date: "March 17th",
   frequency: "Every saturday",
   contact_person: "Tulio",
-  organization_id: wd.id
+  organization_id: wv.id
 )
 wv_offer.save!
 
@@ -193,7 +193,7 @@ wv_offer = Offer.new(
   start_date: "tomorrow",
   frequency: "3 times a week",
   contact_person: "Tulio",
-  organization_id: wd.id
+  organization_id: wv.id
 )
 wv_offer.save!
 
