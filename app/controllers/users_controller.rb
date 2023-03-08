@@ -9,17 +9,15 @@ class UsersController < ApplicationController
     @user.update(user_params)
     @user.save
     # When creates, we can show the final profile, to see the final result!
-    redirect_to user_path(@user)
+    redirect_to user_profile_path(@user)
   end
 
-  def show
-    @user = User.find(params[:id])
+  def profile
+    @user = User.find(params[:user_id])
   end
 
   def user_params
-    params.require(:user).permit(:first_name,
-                                 :last_name,
-                                 :phone_number,
-                                 :interests)
+    params.require(:user).permit(:phone_number,
+                                 interests: [])
   end
 end

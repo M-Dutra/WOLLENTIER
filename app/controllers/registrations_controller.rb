@@ -5,7 +5,7 @@ class RegistrationsController < Devise::RegistrationsController
     if current_user.volunteer?
       edit_user_path(current_user)
     else
-      new_organization_path(current_user)
+      new_organization_path
     end
   end
 end

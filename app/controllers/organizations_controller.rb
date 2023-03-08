@@ -11,8 +11,7 @@ class OrganizationsController < ApplicationController
     @organization = Organization.new(organization_params)
     @organization.user = current_user
     @organization.save
-    # redirect where?!?!
-    # redirect_to users_path(@users)
+    redirect_to organization_path(@organization)
   end
 
   private
@@ -22,6 +21,6 @@ class OrganizationsController < ApplicationController
                                          :description,
                                          :location,
                                          :website,
-                                         :opening_times)
+                                         :opening_time)
   end
 end
