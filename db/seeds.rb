@@ -13,7 +13,7 @@ toni = User.new(
   last_name: "Panacek",
   email: "toni@org.com",
   password: "123456",
-  interests: "Le Wagon",
+  interests: "Children & Youth",
   role: "organization"
 )
 toni.save!
@@ -23,7 +23,7 @@ alexander = User.new(
   last_name: "Wildhagen",
   email: "alex@org.com",
   password: "123456",
-  interests: "Hannover 96",
+  interests: "Advocacy & Human Rights",
   role: "organization"
 )
 alexander.save!
@@ -33,7 +33,7 @@ jonas = User.new(
   last_name: "Ajubi",
   email: "jonas@org.com",
   password: "123456",
-  interests: "X-Wing",
+  interests: "Health & Medicine",
   role: "organization"
 )
 jonas.save!
@@ -43,7 +43,7 @@ manuel = User.new(
   last_name: "Dutra",
   email: "manuel@org.com",
   password: "123456",
-  interests: "CR7",
+  interests: "International",
   role: "organization"
 )
 manuel.save!
@@ -53,7 +53,7 @@ tulio = User.new(
   last_name: "Bonilla",
   email: "tulio@org.com",
   password: "123456",
-  interests: "Food",
+  interests: "Community",
   role: "organization"
 )
 tulio.save!
@@ -99,7 +99,7 @@ stc = Organization.new(
   ",
   location: "Berlin",
   website: "www.savethechildren.de",
-  opening_time: "24 hours",
+  opening_time: "9 am",
   user_id: toni.id
 )
 stc.save!
@@ -115,7 +115,7 @@ oxfam = Organization.new(
   for their actions that impact the poor and vulnerable.",
   location: "USA",
   website: "www.oxfam.org/en",
-  opening_time: "From 8h to 18h",
+  opening_time: "9 am",
   user_id: alexander.id
 )
 oxfam.save!
@@ -132,7 +132,7 @@ dwb = Organization.new(
   vulnerable populations.",
   location: "Berlin",
   website: "www.doctorswithoutborders.org",
-  opening_time: "From monday to thursday, 10h to 16h",
+  opening_time: "From monday to thursday, 10 am",
   user_id: jonas.id
 )
 dwb.save!
@@ -149,7 +149,7 @@ brac = Organization.new(
   people to lift themselves out of poverty and to build more inclusive and resilient societies.",
   location: "Berlin",
   website: "www.bracinternational.org",
-  opening_time: "Usually in the morning",
+  opening_time: "9 am",
   user_id: manuel.id
 )
 brac.save!
@@ -166,14 +166,15 @@ wv = Organization.new(
   sustainable, long-term solutions to poverty that will help children and their communities thrive.",
   location: "Berlin",
   website: "www.worldvision.de",
-  opening_time: "It depends",
+  opening_time: "10 am",
   user_id: tulio.id
 )
 wv.save!
 
 wv_offer = Offer.new(
   title: "World Vision",
-  description: "Helping kids have a better future",
+  description: "Make a difference in the lives of furry friends by volunteering at a local animal shelter.
+  Tasks may include walking dogs, cleaning kennels, and assisting with adoptions.",
   category: "Kids",
   location: "Berlin",
   district: "Charlottenburg",
@@ -186,12 +187,13 @@ wv_offer.save!
 
 wv_offer = Offer.new(
   title: "World Vision",
-  description: "Help others and buy your way to heaven",
+  description: "Help those in need by volunteering at a homeless shelter. Tasks may include serving meals,
+  organizing donations, and providing support to those seeking shelter and resources.",
   category: "Seniors",
   location: "Berlin",
   district: "Mitte",
   start_date: "tomorrow",
-  frequency: "3 times a week",
+  frequency: "3 days / week",
   contact_person: "Tulio",
   organization_id: wv.id
 )
@@ -199,7 +201,8 @@ wv_offer.save!
 
 stc_offer = Offer.new(
   title: "Save the children",
-  description: "Help save the future",
+  description: "Spend time with and provide support for kids in your community by volunteering at a local senior center.
+  asks may include leading activities, assisting with meals, and simply being a friendly face to talk to.",
   category: "Kids",
   location: "Berlin",
   district: "Pankow",
@@ -212,7 +215,9 @@ stc_offer.save!
 
 brac_offer = Offer.new(
   title: "BRAC",
-  description: "Developing a better world",
+  description: "Help protect our planet by volunteering for a local environmental organization.
+  Tasks may include planting trees, cleaning up parks and waterways, and educating the public
+  about the importance of sustainability.",
   category: "Refugees",
   location: "Berlin",
   district: "Treptow",
