@@ -1,67 +1,92 @@
-  <section id="main" class="hero d-flex align-items-center">
-    <div class="container">
-      <div class="row gy-4 d-flex justify-content-between">
-        <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h2 data-aos="fade-up">Connecting Wollentiers in Berlin</h2>
-          <p data-aos="fade-up" data-aos-delay="100">We are here to connect dedicated people with jobs to help build a better world blablabla something super duper deep and meaningful about life in general and how great it is to help. </p>
+<section id="main" class="hero d-flex align-items-center">
+  <div class="container">
+    <div class="row gy-4 d-flex justify-content-center">
+      <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-controller="filter" data-filter-offers-value="<%= @offers.to_json %>">
+        <h2 data-aos="fade-up">Connecting Wollentiers in Berlin</h2>
+        <p data-aos="fade-up" data-aos-delay="100">We are here to connect dedicated people with jobs to help build a better world blablabla something super duper deep and meaningful about life in general and how great it is to help. </p>
 
-          <%= form_with url: offers_path, method: :get, class: "d-flex align-items-stretch mb-3" do %>
+        <%= form_with url: offers_path, method: :get, class: "d-flex align-items-stretch mb-3" do %>
+
           <%= text_field_tag :query,
             params[:query],
             class: "form-control",
             placeholder: "Enter ZIP code or keyword"
           %>
           <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+        <div class="row gy-4">
+
+          <%= form_with url: offers_path, method: :get do %>
+          <%= hidden_field_tag "Kids" %>
+            <button class="btn btn-primary btn-circle btn-xl" id="Kids">
+              <i class="fa-solid fa-children"></i>
+              <br>
+              <span>Kids</span>
+            </button>
           <% end %>
 
-          <!-- Top Categories -->
-          <!-- maybe include jobs listed with purecounter -->
-          <!-- buttons on home can be styled in _buttons_front.scss -->
-          <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
+          <%= form_with url: offers_path, method: :get do %>
+          <%= hidden_field_tag "Kids" %>
+            <button class="btn btn-primary btn-circle btn-xl" id="Seniors">
+              <i class="fa-solid fa-person-cane"></i>
+              <br>
+              <span>Seniors</span>
+            </button>
+          <% end %>
 
-            <div class="col-lg-2 col-6">
-              <div class="stats-item text-center w-100 h-100">
-                <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="fa-solid fa-children"></i><br>Kids
-                </button>
-              </div>
-            </div>
-            <!-- End Stats Item -->
+          <%= form_with url: offers_path, method: :get do %>
+          <%= hidden_field_tag "Kids" %>
+            <button class="btn btn-primary btn-circle btn-xl" id="Refugees">
+            <i class="fa-solid fa-handshake"></i>
+              <br>
+              <span>Refugees</span>
+            </button>
+          <% end %>
 
-            <div class="col-lg-2 col-6">
-              <div class="stats-item text-center w-100 h-100">
-                <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="fa-solid fa-person-cane"></i><br>Seniors
-                </button>
-              </div>
-            </div>
-            <!-- End Stats Item -->
+          <%= form_with url: offers_path, method: :get do %>
+          <%= hidden_field_tag "Kids" %>
+            <button class="btn btn-primary btn-circle btn-xl" id="Health">
+            <i class="fa-solid fa-heart-pulse"></i>
+              <br>
+              <span>Health</span>
+            </button>
+          <% end %>
 
-            <div class="col-lg-2 col-6">
-              <div class="stats-item text-center w-100 h-100">
-                <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="fa-solid fa-handshake"></i><br>Refugees
-                </button>
-              </div>
-            </div>
-            <!-- End Stats Item -->
+          <%= form_with url: offers_path, method: :get do %>
+          <%= hidden_field_tag "Kids" %>
+            <button class="btn btn-primary btn-circle btn-xl" id="all">
+            <i class="fa-solid fa-rectangle-list"></i>
+              <br>
+              <span>Browse all</span>
+            </button>
+          <% end %>
 
-            <div class="col-lg-2 col-6">
-              <div class="stats-item text-center w-100 h-100">
-                <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="fa-solid fa-heart-pulse"></i><br>Health
-                </button>
-              </div>
-            </div>
-            <!-- End Stats Item -->
+          <%# <button class="btn btn-primary btn-circle btn-xl" data-action="click->filter#filterOffers" id="Seniors">
+            <i class="fa-solid fa-person-cane"></i>
+            <br>
+            <span>Seniors</span>
+          </button> %>
 
-            <div class="col-lg-2 col-6">
-              <div class="stats-item text-center w-100 h-100">
-              <a href="/offers">
-                <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="fa-solid fa-rectangle-list"></i><br>Browse all
-                </button>
-              </div>
-            </div>
-            <!-- End Stats Item -->
-          </div>
+          <%# <button class="btn btn-primary btn-circle btn-xl" data-action="click->filter#filterOffers" id="Refugees">
+            <i class="fa-solid fa-handshake"></i>
+            <br>
+            <span>Refugees</span>
+          </button> %>
+
+          <%# <button class="btn btn-primary btn-circle btn-xl" data-action="click->filter#filterOffers" id="Health">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <br>
+            <span>Health</span>
+          </button>
+
+          <button class="btn btn-primary btn-circle btn-xl" data-action="click->filter#filterOffers" id="all">
+            <i class="fa-solid fa-rectangle-list"></i>
+            <br>
+            <span>Browse all</span>
+          </button> %>
+
         </div>
       </div>
     </div>
-  </section>
-  <!-- End Main Section -->
+  </div>
+</section>
