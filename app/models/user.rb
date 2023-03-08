@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_one :organization
-  has_many :applications
+  has_one :organization, dependent: :destroy
+  has_many :applications, dependent: :destroy
   enum :role, [:volunteer, :organization]
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
