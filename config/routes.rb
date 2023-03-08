@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   resources :organizations, only: %i[show new create]
 
   devise_for :users, controllers: { registrations: "registrations" }
+
+  resources :offers
 end
