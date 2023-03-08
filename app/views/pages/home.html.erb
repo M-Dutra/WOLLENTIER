@@ -1,7 +1,3 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= link_to "Log Out", destroy_user_session_path, data: { turbo_method: :delete } %>
-
   <section id="main" class="hero d-flex align-items-center">
     <div class="container">
       <div class="row gy-4 d-flex justify-content-between">
@@ -16,12 +12,12 @@
 
           <!-- Top Categories -->
           <!-- maybe include jobs listed with purecounter -->
+          <!-- buttons on home can be styled in _buttons_front.scss -->
           <div class="row gy-4" data-aos="fade-up" data-aos-delay="400">
 
             <div class="col-lg-2 col-6">
               <div class="stats-item text-center w-100 h-100">
-                <button>
-                  <i class="fa-solid fa-children"></i><br>Kids
+                <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="fa-solid fa-children"></i><br>Kids
                 </button>
               </div>
             </div>
@@ -29,8 +25,7 @@
 
             <div class="col-lg-2 col-6">
               <div class="stats-item text-center w-100 h-100">
-                <button>
-                  <i class="fa-solid fa-person-cane"></i><br>Seniors
+                <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="fa-solid fa-person-cane"></i><br>Seniors
                 </button>
               </div>
             </div>
@@ -38,8 +33,7 @@
 
             <div class="col-lg-2 col-6">
               <div class="stats-item text-center w-100 h-100">
-                <button>
-                  <i class="fa-solid fa-handshake"></i><br>Refugees
+                <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="fa-solid fa-handshake"></i><br>Refugees
                 </button>
               </div>
             </div>
@@ -47,8 +41,7 @@
 
             <div class="col-lg-2 col-6">
               <div class="stats-item text-center w-100 h-100">
-                <button>
-                  <i class="fa-solid fa-heart-pulse"></i><br>Health
+                <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="fa-solid fa-heart-pulse"></i><br>Health
                 </button>
               </div>
             </div>
@@ -56,8 +49,7 @@
 
             <div class="col-lg-2 col-6">
               <div class="stats-item text-center w-100 h-100">
-                <button>
-                  <i class="fa-solid fa-folder-tree"></i><br>Browse all jobs
+                <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="fa-solid fa-rectangle-list"></i><br>Browse all
                 </button>
               </div>
             </div>
