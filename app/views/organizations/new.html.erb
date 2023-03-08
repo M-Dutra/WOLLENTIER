@@ -1,9 +1,9 @@
 <h1>Create Your Organization Profile Page</h1>
-<%= simple_form_for [@user, @organization] do |f| %>
+<%= simple_form_for @organization do |f| %>
   <%= f.input :name, label: 'Organization Name', error: 'Organization name is mandatory, please specify one', placeholder: 'Greenpeace' %>
   <%= f.input :description, label: 'Add a Description' %>
   <%= f.input :location, label: 'Location', placeholder: 'Chausseestraße 84, 10115 Berlin' %>
-  <%= f.input :website, label: 'Website' placeholder: 'https://www.greenpeace.de/' %>
-  <%= f.input :opening_times, label: 'Opening hours' placeholder: 'Time: 8:00-12:00 all days of the week' %>
+  <%= f.input :website, label: 'Website', placeholder: 'https://www.greenpeace.de/'%>
+  <%= f.input :opening_time, label: 'Opening hours', placeholder: 'Time: 8:00-12:00 all days of the week' %>
   <%= f.button :submit %>
 <% end %>
