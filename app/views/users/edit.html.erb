@@ -1,0 +1,6 @@
+<h1>Create a Voluntary Profile</h1>
+<%= simple_form_for @user do |f| %>
+  <%= f.input :phone_number, placeholder: '+49 30 901820', hint: 'Type for country inicial numbers' %>
+  <%= f.input :interests, collection: [ "Kids", "Seniors", "Refugees", "Health"], as: :check_boxes %>
+  <%= f.button :submit %>
+<% end %>
