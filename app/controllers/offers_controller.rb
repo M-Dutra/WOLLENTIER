@@ -1,7 +1,19 @@
 class OffersController < ApplicationController
-  before_action :set_inflatable, only: %i[show edit update destroy]
+  before_action :set_offer, only: %i[show edit update destroy]
   def index
-    @offers = Offer.all
+    if params[:query].present?
+      sql_query = <<~SQL
+        offers.title @@ :query
+        OR offers.description @@ :query
+        OR offers.category @@ :query
+        OR offers.location @@ :query
+        OR organizations.name @@ :query
+        OR organizations.description @@ :query
+      SQL
+      @offers = Offer.joins(:organization).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @offers = Offer.all
+    end
   end
 
   def show
