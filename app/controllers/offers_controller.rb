@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
-  before_action :set_inflatable, only: %i[show edit update destroy]
+  before_action :set_offer, only: %i[show edit update destroy]
   def index
     @offers = Offer.all
   end
@@ -40,7 +40,8 @@ class OffersController < ApplicationController
   private
 
   def offer_params
-    params.require(:offer).permit()
+    params.require(:offer).permit(:title, :description, :category, :location, :start_date, :frequency,
+    :contact_person, :district)
   end
 
   def set_offer
