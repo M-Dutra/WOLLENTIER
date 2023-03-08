@@ -218,7 +218,7 @@ brac_offer = Offer.new(
   description: "Help protect our planet by volunteering for a local environmental organization.
   Tasks may include planting trees, cleaning up parks and waterways, and educating the public
   about the importance of sustainability.",
-  category: "Environmen",
+  category: "Environment",
   location: "Berlin",
   district: "Treptow",
   start_date: "Next week",
