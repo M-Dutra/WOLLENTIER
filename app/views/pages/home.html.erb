@@ -5,10 +5,14 @@
           <h2 data-aos="fade-up">Connecting Wollentiers in Berlin</h2>
           <p data-aos="fade-up" data-aos-delay="100">We are here to connect dedicated people with jobs to help build a better world blablabla something super duper deep and meaningful about life in general and how great it is to help. </p>
 
-          <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-            <input type="text" class="form-control" placeholder="Keyword or ZIP code">
-            <button type="submit" class="btn btn-primary">Search</button>
-          </form>
+          <%= form_with url: offers_path, method: :get, class: "d-flex align-items-stretch mb-3" do %>
+          <%= text_field_tag :query,
+            params[:query],
+            class: "form-control",
+            placeholder: "Enter ZIP code or keyword"
+          %>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+          <% end %>
 
           <!-- Top Categories -->
           <!-- maybe include jobs listed with purecounter -->
@@ -49,7 +53,7 @@
 
             <div class="col-lg-2 col-6">
               <div class="stats-item text-center w-100 h-100">
-              <a href="index.html">
+              <a href="/offers">
                 <button type="button" class="btn btn-primary btn-circle btn-xl"><i class="fa-solid fa-rectangle-list"></i><br>Browse all
                 </button>
               </div>

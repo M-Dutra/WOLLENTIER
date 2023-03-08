@@ -1,0 +1,27 @@
+<!-- Page Content -->
+<section class="py-5 bg-white">
+  <div class="container px-4 px-lg-5 my-5">
+      <div class="row gx-4 gx-lg-5">
+          <div class="col-md-6">
+              <div class="small mb-1"><%= @offer.category %></div>
+              <h1 class="display-5 fw-bolder"><%= @offer.title %></h1>
+              <p class="lead"><%= @offer.description %></p>
+              <div class="d-flex">
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- further recommendations-->
+<section class="py-5 bg-light" style="margin-top: 50px">
+  <div class="container px-4 px-lg-5 mt-5 fw-bolder"> <h1>Related Jobs</h1>
+    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+    </div>
+  </div>
+</section>
+
+<!-- PUNDIT - PLEASE ADD THE BUTTONS BELOW TO THEIR RELATED DIV-->
+<% if policy(@offer).edit? %>
+  <%= link_to "Edit this offer", edit_offer_path(@offer) %> |
+<% end %>
+<%= button_to "Destroy this offer", @offer, method: :delete if policy(@offer).destroy? %>
