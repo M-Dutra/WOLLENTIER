@@ -2,5 +2,14 @@
 <h2><%= @organization.name %></h2>
 <h2><%= @organization.description %></h2>
 <p><%= @organization.location %></p>
+<%# <p><%= @organization.district%></p> %>
+
 <p><%= @organization.website %><p>
 <p><%= @organization.opening_time %><p>
+
+<div id="map"
+  style="width: 100%; height: 300px;"
+  data-controller="map"
+  data-map-markers-value="<%= @markers.to_json %>"
+  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>

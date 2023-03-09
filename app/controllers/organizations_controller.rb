@@ -1,15 +1,23 @@
 class OrganizationsController < ApplicationController
   def show
     @organization = Organization.find(params[:id])
+    authorize @organization
+    @markers = [{
+      lat: @organization.latitude,
+      lng: @organization.longitude
+    }]
   end
 
   def new
     @organization = Organization.new
+    authorize @organization
   end
 
   def create
     @organization = Organization.new(organization_params)
     @organization.user = current_user
+    authorize @organization
+
     @organization.save
     redirect_to organization_path(@organization)
   end
