@@ -27,4 +27,8 @@ class OfferPolicy < ApplicationPolicy
   def destroy?
     record.organization.user == user
   end
+
+  def create_application?
+    user.volunteer? && record.organization.user != user
+  end
 end
