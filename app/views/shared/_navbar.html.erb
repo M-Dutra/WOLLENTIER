@@ -1,32 +1,20 @@
-  <!-- End Header -->
 <div class="container">
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-    <%= link_to "WOLLENTIER", root_path, class: "navbar-brand" %>
-      <form class="d-flex" role="links">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-
-
-              <button class="btn btn-outline-secondary">
-                <%- if user_signed_in? %>
-                  <li><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} if user_signed_in? %></li>
+      <%= link_to "WOLLENTIER", root_path, class: "navbar-brand" %>
+        <form class="d-flex" role="links">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <% if user_signed_in? %>
+                  <%= button_to "My Dashboard", offers_path, method: :get, class: "btn btn-warning" %>
+                  <%= button_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-outline-light" %>
                 <% else %>
-                  <li><%= link_to "Login Here", new_user_session_path unless user_signed_in? %></li>
+                  <%= button_to "Sign Up", new_user_session_path, method: :get, class: "btn btn-outline-light" %>
+                  <%= button_to "Login", new_user_session_path, method: :get, class: "btn btn-warning" %>
                 <% end %>
-              </button>
-
-              <button class="btn btn-warning">
-                <%- if user_signed_in? %>
-                  <li><%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete} if user_signed_in? %></li>
-                <% else %>
-                  <li><%= link_to "Login Here", new_user_session_path unless user_signed_in? %></li>
-                <% end %>
-              </button>
-
-
-          </form>
-        </ul>
+              </li>
+            </ul>
+        </form>
     </div>
   </nav>
 </div>
