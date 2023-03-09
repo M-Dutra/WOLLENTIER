@@ -18,7 +18,9 @@ class OffersController < ApplicationController
   end
 
   def show
+    @application = Application.new
     authorize @offer
+    # authorize @application
   end
 
   def new

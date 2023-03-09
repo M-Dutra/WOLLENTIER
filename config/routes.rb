@@ -11,5 +11,11 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: "registrations" }
 
-  resources :offers
+  resources :offers do
+    resources :applications, only: %i[new create]
+  end
+
+  resources :applications, only: %i[show destroy update]
+
+  get 'dashboard', to: 'pages#dashboard'
 end
