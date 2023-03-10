@@ -1,5 +1,5 @@
 <% if current_user.volunteer? %>
-  <%= render "volunteer_dashboard" %>
+  <%= render "volunteer_dashboard", :offers => @offers %>
 <% else %>
   <%= render "ngo_dashboard", :applications => @applications %>
 <% end %>

@@ -19,8 +19,9 @@ class ApplicationsController < ApplicationController
   end
 
   def update
-    @offer = Offer.find(params[:id])
-    if @offer.update(offer_params)
+    @application = Application.find(params[:id])
+    authorize @application.offer, :update?
+    if @application.update(application_params)
       redirect_to dashboard_path
     else
       render :new, status: :unprocessable_entity
@@ -34,6 +35,6 @@ class ApplicationsController < ApplicationController
   end
 
   def application_params
-    params.require(:application).permit(:title, :message)
+    params.require(:application).permit(:title, :message, :status)
   end
 end
