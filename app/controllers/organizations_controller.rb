@@ -1,4 +1,6 @@
 class OrganizationsController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[index show]
+  
   def show
     @organization = Organization.find(params[:id])
     authorize @organization

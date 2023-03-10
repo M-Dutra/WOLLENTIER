@@ -1,3 +1,139 @@
 .container .d-flex {
   justify-content: center;
 }
+
+.inflatable {
+  height: 300px;
+  overflow: hidden;
+}
+
+.inflatable-img {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%
+}
+
+.card-style {
+  border-style: none;
+  a {
+    text-decoration: none;
+  }
+
+  &:hover {
+    border: 1px #000000 solid;
+
+  }
+
+}
+.card {
+  border: 1px #ffffff solid
+}
+
+.card-title {
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+
+}
+
+.card-subtitle {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  color: #cbcbcb;
+  text-decoration: none;
+}
+
+.card-price {
+  font-size: 16px;
+  color: #364aa6;
+  text-decoration: none;
+
+}
+
+.card-body {
+  position: relative;
+}
+
+.price-label {
+  min-width: 56px;
+  height: 28px;
+  background-color: white;
+  position: absolute;
+  top: -28px;
+  left: 0px;
+  padding: 6px;
+}
+
+.card-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+  padding-top: 8px;
+}
+
+.card-date {
+  margin: none;
+  font-size: 16px;
+
+}
+
+
+.applications {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0;
+
+  .application-left {
+    display: flex;
+    align-items: center;
+  }
+
+  .application-actions {
+    display: flex;
+    align-items: center;
+  }
+  .application-tag {
+    margin: 1px 4px;
+    padding: 2px 5px 0px 5px;
+    background-color: #bfbfbf;
+    color: white;
+    border-radius: 8px;
+    font-weight: lighter;
+    font-size: 12px;
+  }
+}
+
+.applications-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+
+  .applications-info-title {
+    font-weight: bolder;
+    font-size: 1.2em;
+  }
+
+  .applications-info-details {
+    font-weight: lighter;
+  }
+}
+
+.btn-info {
+  background-color: #7CE577;
+  border: none;
+  --bs-btn-hover-bg: #3df733
+  ;
+}
+
+.btn-light {
+  border: none;
+  --bs-btn-hover-bg: #f99a9c
+  ;
+}

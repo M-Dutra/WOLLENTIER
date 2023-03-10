@@ -4,4 +4,8 @@ class Application < ApplicationRecord
 
   validates :title, presence: true
   validates :message, presence: true, length: { minimum: 5 }
+
+  def pending?
+    status == nil
+  end
 end
