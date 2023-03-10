@@ -6,6 +6,7 @@
               <div class="small mb-1"><%= @offer.category %></div>
               <h1 class="display-5 fw-bolder"><%= @offer.title %></h1>
               <p class="lead"><%= @offer.description %></p>
+              <img src="<%= @offer.organization.logo_url %>" />
               <div class="d-flex">
           </div>
       </div>
@@ -28,9 +29,11 @@
 <%= button_to "Delete this offer", @offer, method: :delete if policy(@offer).destroy? %>
 
 <!-- Button trigger modal -->
+<% if user_signed_in? && current_user.volunteer? %>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Apply fo Job
 </button>
+<% end %>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
