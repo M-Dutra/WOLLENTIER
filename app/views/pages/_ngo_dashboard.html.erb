@@ -3,22 +3,57 @@
 
   <div class="applications">
     <% @applications.each do |application| %>
-      <div class="applications">
-        <div class="application-actions">
-          <% if application.pending? %>
-            <%= simple_form_for application do |f| %>
-              <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-              <%= f.submit 'Accept', class: 'btn btn-info' %>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/?volunteer" alt="Random image">
+        <div class="card-body">
+          <h5 class="card-title"><%= application.title %></h5>
+          <div class="application-actions">
+            <% if application.pending? %>
+              <%= simple_form_for application do |f| %>
+                <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+                <%= f.submit 'Accept', class: 'btn btn-info' %>
+              <% end %>
+              <%= simple_form_for application do |f| %>
+                <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+                <%= f.submit 'Reject', class: 'btn btn-light' %>
+              <% end %>
+            <% else %>
+              <p class='application-tag'><%= application.status %></p>
             <% end %>
-            <%= simple_form_for application do |f| %>
-              <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
-              <%= f.submit 'Reject', class: 'btn btn-light' %>
-            <% end %>
-          <% else %>
-            <p class='application-tag'><%= application.status %></p>
-          <% end %>
+          </div>
         </div>
       </div>
     <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="d-flex justify-content-between  mt-4 mb-4">
+      <h2 class= "m-0">My Offers</h2>
+      <%= link_to "Add offer", new_offer_path, class:"btn btn-primary" %>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+      <% @offers.each do |offer| %>
+      <div class="col-12 col-sm-6 col-md-3">
+        <div class="card-group">
+          <div class="card h-100 card-style">
+            <div class="application">
+              <img src="https://source.unsplash.com/random/" class="img-thumbnail" alt="...">
+            </div>
+            <%= link_to offer_path(offer) do %>
+              <div class="card-body">
+                <h6 class="card-subtitle "><%= offer.category %></h6>
+                <p class="card-title"><%= offer.title %></p>
+                <div class="price-label text-center align-middle">
+                <h3 class="card-price"><%= offer.start_date %></h3>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <% end %>
   </div>
 </div>

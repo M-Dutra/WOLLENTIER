@@ -1,17 +1,21 @@
+<div class="container">
+<div>
 <h2>All Wollentier jobs in Berlin</h2>
-<div class="row row-cols-12 row-cols-md-4 g-4">
-  <% @offers.each do |offer| %>
-    <div class="card-group">
-      <div class="card h-100 card-style" style="width: 18rem;">
-        <%= link_to offer_path(offer) do %>
-        <div class="card-body">
-          <h6 class="card-subtitle "><%= offer.category %></h6>
-          <p class="card-title"><%= offer.title %></p>
-          <div class="price-label text-center align-middle">
+</div>
+<br>
+  <div class="row row-cols-12 row-cols-md-4 g-4">
+    <% @offers.each do |offer| %>
+      <div class="card-group">
+        <div class="card h-100 card-style" style="width: 18rem;">
+          <%= link_to offer_path(offer) do %>
+          <div class="card-body">
+            <h6 class="card-subtitle "><%= offer.category %></h6>
+            <p class="card-title"><strong><%= offer.title %></strong></p>
+            <p class="card-title"><%= offer.description %></p>
           </div>
+        <% end %>
         </div>
-      <% end %>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
