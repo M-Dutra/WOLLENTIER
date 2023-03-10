@@ -11,4 +11,5 @@ class Offer < ApplicationRecord
   validates :frequency, presence: true
   validates :contact_person, presence: true
   validates :district, presence: true
+
 end
