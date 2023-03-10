@@ -21,6 +21,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_10_111207) do
     t.datetime "updated_at", null: false
     t.string "title"
     t.text "message"
+    t.string "status"
     t.index ["offer_id"], name: "index_applications_on_offer_id"
     t.index ["user_id"], name: "index_applications_on_user_id"
   end
@@ -39,6 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_10_111207) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "district"
+    t.string "status"
     t.index ["organization_id"], name: "index_offers_on_organization_id"
   end
 

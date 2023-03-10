@@ -1,15 +1,134 @@
-<h1>Organization Profile</h1>
-<h2><%= @organization.name %></h2>
-<h2><%= @organization.description %></h2>
-<p><%= @organization.location %></p>
-<%# <p><%= @organization.district%></p> %>
+<%# <h1>Organization Profile</h1>
+<h2><%= @organization.name %>
+<%# <h2><%= @organization.description</h2> %>
+<%# <p><%= @organization.location</p> %>
+<%# <p><%= @organization.district</p> %>
 
-<p><%= @organization.website %><p>
-<p><%= @organization.opening_time %><p>
+<%# <p><%= @organization.website<p> %>
+<%# <p><%= @organization.opening_time<p> %>
 
-<div id="map"
+<%# <div id="map"
   style="width: 100%; height: 300px;"
   data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+  data-map-markers-value="<%= @markers.to_json %>
+  <%# data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>
+<%# </div> %>
+
+
+<%# ........................................................ %>
+<div class="container">
+    <div class="main-body">
+
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item"><a href="javascript:void(0)">User</a></li>
+              <li class="breadcrumb-item active" aria-current="page">User Profile</li>
+            </ol>
+          </nav>
+          <!-- /Breadcrumb -->
+
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/onu.jpg" alt="Admin" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                      <h4><%= @organization.name %></h4>
+                      <p class="text-secondary mb-1"><%= @organization.location %></p>
+                      <%# <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p> %>
+                      <%# <button class="btn btn-primary">Follow</button> %>
+                      <%# <button class="btn btn-outline-primary">Message</button> %>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-3">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><svg xmlns="file:///Users/manuel_dutra/Downloads/21448395241556281664.svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Contact Person</h6>
+                    <span class="text-secondary"><%= @organization.user.first_name %> <%= @organization.user.last_name %> </span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Personal Email</h6>
+                    <span class="text-secondary"><%= @organization.user.email %></span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Phone Number</h6>
+                    <span class="text-secondary"><%= @organization.user.phone_number %></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Organization</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <%= @organization.name %>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Description</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <%= @organization.description %>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Website</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <%= @organization.website %>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Opening Time</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <%= @organization.opening_time %>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Location</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <%= @organization.location %>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <a class="btn btn-info " target="__blank" href="https://www.bootdey.com/snippets/view/profile-edit-data-and-skills">Edit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row gutters-sm" id="map"
+                style="width: 100%; height: 300px;"
+                data-controller="map"
+                data-map-markers-value="<%= @markers.to_json %>"
+                data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+              </div>
+
+
+
+            </div>
+          </div>
+
+        </div>
+    </div>
