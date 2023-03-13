@@ -20,6 +20,10 @@ class OffersController < ApplicationController
   def show
     @application = Application.new
     authorize @offer
+    @markers = [{
+      lat: @offer.latitude,
+      lng: @offer.longitude
+    }]
     # authorize @application
     @related_offers = Offer.where(category: @offer.category).where.not(id: @offer.id).group_by(&:category)
   end

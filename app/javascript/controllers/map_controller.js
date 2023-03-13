@@ -4,7 +4,8 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static values = {
     apiKey: String,
-    markers: Array
+    markers: Array,
+    zoom: Number
   }
 
   connect() {
@@ -22,7 +23,7 @@ export default class extends Controller {
     this.markersValue.forEach((marker)=> {
       bounds.extend([marker.lng, marker.lat])
     })
-    this.map.fitBounds(bounds, {padding: 30, duration: 0, maxZoom: 15})
+    this.map.fitBounds(bounds, {padding: 30, duration: 0, maxZoom: this.zoomValue})
   }
 
   // padding: 70, maxZoom: 15, duration: 0
