@@ -1,0 +1,22 @@
+.tags {
+  font-family: $headers-font;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-top: 8px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+
+  background-color: white;
+  opacity: 1;
+
+  &::placeholder {
+    color: #bac9d2;
+  }
+}
+
+body {
+  background-color: white;
+}

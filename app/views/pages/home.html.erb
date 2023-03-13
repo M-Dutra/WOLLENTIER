@@ -1,69 +1,79 @@
-<%= render "shared/banner" %>
+<div class="banner-home" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://mitvergnuegen.com/wp-content/uploads/2018/06/vostel_credits-timur-celikel-680x453.jpg);">
 
-<section id="main" class="hero d-flex align-items-center">
+
+<section id="main" class="hero d-flex align-items-center justify-content-center">
   <div class="container">
-    <div class="row gy-4 d-flex justify-content-center">
-      <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-controller="filter" data-filter-offers-value="<%= @offers.to_json %>">
-        <h2 data-aos="fade-up">Connecting Wollentiers in Berlin</h2>
-        <p data-aos="fade-up" data-aos-delay="100">We are here to connect dedicated people with jobs to help build a better world blablabla something super duper deep and meaningful about life in general and how great it is to help. </p>
+    <h1>Find your volunteer <br> job in Berlin.</h1>
+    <div>
+      <div class="col-lg-5 d-flex flex-column" data-controller="filter" data-filter-offers-value="<%= @offers.to_json %>">
+        <%# <h2 data-aos="fade-up">Connecting Wollentiers in Berlin</h2>
+        <p data-aos="fade-up" data-aos-delay="100">We are here to connect dedicated people with jobs to help build a better world blablabla something super duper deep and meaningful about life in general and how great it is to help. </p> %>
 
-        <%= form_with url: offers_path, method: :get, class: "d-flex align-items-stretch mb-3" do %>
+        <%= form_with url: offers_path, method: :get, class: "d-flex align-items-stretch mb-3 mt-4" do %>
 
           <%= text_field_tag :query,
             params[:query],
-            class: "form-control",
+            class: "form-control placeholder",
             placeholder: "Enter ZIP code or keyword"
           %>
           <%= submit_tag "Search", class: "btn btn-primary" %>
         <% end %>
-        <div class="d-flex justify-content-around">
 
-          <%= form_with url: offers_path, method: :get do %>
-          <%= hidden_field_tag :query, "Kids" %>
-            <button class="btn btn-primary btn-circle btn-xl" id="Kids">
-              <i class="fa-solid fa-children"></i>
-              <br>
-              <span>Kids</span>
-            </button>
-          <% end %>
+        <%# <h4 class="mt-5">Search by category</h4> %>
+        <div class="d-flex justify-content-between mt-4">
+          <div>
+            <%= form_with url: offers_path, method: :get do %>
+            <%= hidden_field_tag :query, "Kids" %>
+              <button class="btn btn-category btn-circle btn-xl" id="Kids">
+                  <i class="fa-solid fa-children fa-xl"></i>
+                <br>
+
+              </button>
+              <p class="tags">Kids</p>
+            <% end %>
+          </div>
 
           <%= form_with url: offers_path, method: :get do %>
           <%= hidden_field_tag :query, "Seniors" %>
-            <button class="btn btn-primary btn-circle btn-xl" id="Seniors">
-              <i class="fa-solid fa-person-cane"></i>
+            <button class="btn btn-category btn-circle btn-xl" id="Seniors">
+                <i class="fa-solid fa-person-cane fa-xl"></i>
               <br>
-              <span>Seniors</span>
+
             </button>
+            <p class="tags">Seniors</p>
           <% end %>
 
           <%= form_with url: offers_path, method: :get do %>
           <%= hidden_field_tag :query, "Refugees" %>
-            <button class="btn btn-primary btn-circle btn-xl" id="Refugees">
-            <i class="fa-solid fa-handshake"></i>
+            <button class="btn btn-category btn-circle btn-xl" id="Refugees">
+              <i class="fa-solid fa-handshake fa-xl"></i>
               <br>
-              <span>Refugees</span>
+
             </button>
+            <p class="tags">Refugees</p>
           <% end %>
 
           <%= form_with url: offers_path, method: :get do %>
           <%= hidden_field_tag :query, "Health" %>
-            <button class="btn btn-primary btn-circle btn-xl" id="Health">
-            <i class="fa-solid fa-heart-pulse"></i>
+            <button class="btn btn-category btn-circle btn-xl" id="Health">
+              <i class="fa-solid fa-heart-pulse fa-xl"></i>
               <br>
-              <span>Health</span>
+
             </button>
+            <p class="tags">Health</p>
           <% end %>
 
           <%= form_with url: offers_path, method: :get do %>
           <%= hidden_field_tag "all" %>
-            <button class="btn btn-primary btn-circle btn-xl" id="all">
-            <i class="fa-solid fa-rectangle-list"></i>
+            <button class="btn btn-category btn-circle btn-xl" id="all">
+              <i class="fa-solid fa-rectangle-list fa-xl"></i>
               <br>
-              <span>Browse all</span>
             </button>
+            <p class="tags">All</p>
           <% end %>
         </div>
       </div>
     </div>
   </div>
 </section>
+</div>
