@@ -25,7 +25,7 @@ alexander = User.new(
   email: "alex@org.com",
   password: "123456",
   phone_number: "4915561556157",
-  interests: "Advocacy & Human Rights",
+  interests: "Human Rights",
   role: "organization"
 )
 alexander.save!
@@ -36,7 +36,7 @@ jonas = User.new(
   email: "jonas@org.com",
   password: "123456",
   phone_number: "491635556416",
-  interests: "Health & Medicine",
+  interests: "Health",
   role: "organization"
 )
 jonas.save!
@@ -69,7 +69,7 @@ leo = User.new(
   email: "leo@org.com",
   password: "123456",
   phone_number: "4930737860946",
-  interests: "Homeless & Housing",
+  interests: "Housing",
   role: "organization"
 )
 leo.save!
@@ -80,7 +80,7 @@ florian = User.new(
   email: "florian@org.com",
   password: "123456",
   phone_number: "4930738769431",
-  interests: "Advocacy & Human Rights",
+  interests: "Human Rights",
   role: "organization"
 )
 florian.save!
