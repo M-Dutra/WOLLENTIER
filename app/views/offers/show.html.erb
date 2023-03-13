@@ -16,22 +16,26 @@
 
 <!-- further recommendations-->
 <section class="py-5 bg-light" style="margin-top: 50px">
-  <div class="container px-4 px-lg-5 mt-5 fw-bolder"> <h1>Related Jobs</h1>
-    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-      <% @offers.each do |offer| %>
+  <div class="container px-4 px-lg-5 mt-5 fw-bolder">
+    <h1>Related Jobs</h1>
+      <% @related_offers.each do |category, offers| %>
         <div class="card-group">
-          <div class="card h-100 card-style" style="width: 18rem;">
-            <%= link_to offer_path(offer) do %>
-              <div class="card-body">
-                <h6 class="card-subtitle "><%= offer.category %></h6>
-                <p class="card-title"><%= offer.title %></p>
-                <p class="card-description"><%= offer.description.slice(0..128) + "..." %></p>
-                <p class="card-district"><%= offer.district %></p>
-                <img src="<%= offer.organization.logo_url %>" class="card-offer-logo avatar-bordered" />
-              </div>
-            <% end %>
-          </div>
-        </div>
+          <h3 class="text-center mb-3"><%= category %></h3>
+          <% offers.each do |offer| %>
+            <div class="card h-100 card-style" style="width: 18rem;">
+              <%= link_to offer_path(offer) do %>
+                <div class="card-body">
+                  <h6 class="card-subtitle "><%= offer.category %></h6>
+                  <p class="card-title"><%= offer.title %></p>
+                  <p class="card-description" style=><%= offer.description.slice(0..128) + "..." %></p>
+                  <p class="card-district"><%= offer.district %></p>
+                  <img src="<%= offer.organization.logo_url %>" class="card-offer-logo avatar-bordered" />
+                  <div class="price-label text-center align-middle">
+                  </div>
+                </div>
+              <% end %>
+            </div>
+          <% end %>
       <% end %>
     </div>
   </div>
@@ -46,7 +50,7 @@
 <!-- Button trigger modal -->
 <% if user_signed_in? && current_user.volunteer? %>
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Apply fo Job
+  Apply for Job
 </button>
 <% end %>
 

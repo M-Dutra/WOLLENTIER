@@ -9,9 +9,11 @@
         <div class="card h-100 card-style" style="width: 18rem;">
           <%= link_to offer_path(offer) do %>
           <div class="card-body">
-            <h6 class="card-subtitle "><%= offer.category %></h6>
+            <span class="card-badge"><%= offer.category %></span>
             <p class="card-title"><strong><%= offer.title %></strong></p>
             <p class="card-title"><%= offer.description.slice(0..256) + "..." %></p>
+            <p class="card-district"><%= offer.district %></p>
+            <img src="<%= offer.organization.logo_url %>" class="card-offer-logo avatar-bordered" />
           </div>
         <% end %>
         </div>
