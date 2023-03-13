@@ -1,14 +1,56 @@
 .btn-circle.btn-xl {
-  width: 80px;
-  height: 80px;
+  width: 48px;
+  height: 48px;
   border-radius: 50px;
-  font-size: 12px;
-  background-color: #119fee;
-  border: none;
+  font-size: 10px;
+  background-color: $w-blue;
+  color: rgba(255, 255, 255, 0.8);
+
+  &:hover {
+    color: #ffffff;
+    border: 2px solid white;
+    // text-decoration: underline;
+  }
+
 }
 
-.btn.btn-primary {
+.btn-category {
 background-color: #119fee;
 border: none;
 }
 
+
+.btn.btn-primary {
+  background-color: #119fee;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-family: $headers-font;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 8px 16px 7px 16px;
+  border-radius: 4px;
+  margin-left: 16px;
+  }
+
+.nav-btn-primary {
+  color: $w-blue;
+  font-weight: 600;
+  font-family: $headers-font;
+  font-size: 16px;
+  background-color: white;
+  text-decoration: none;
+  padding: 8px 16px 7px 16px;
+  border-radius: 4px;
+  margin-top: 20px;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: $w-blue;
+    // text-decoration: underline;
+  }
+}
+
+.i {
+  font-size: 20px;
+}
