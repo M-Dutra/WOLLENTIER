@@ -1,3 +1,30 @@
+<%= render "shared/banner" %>
+
+
+<div class="container">
+  <div class="row">
+
+    <%# title and description %>
+      <div class="col-8">
+        <h1><%= @offer.title %></h1>
+        <p><%= @offer.description %></p>
+        <h4><%= @offer.category %></h4>
+        <img src="<%= @offer.organization.logo_url %>" />
+      </div>
+      <div class="col-4">
+        <p>hchdhfhhfhfhfhfhfhhfhbf</p>
+      </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
 <!-- Page Content -->
 <section class="py-5 bg-white">
   <div class="container px-4 px-lg-5 my-5">
