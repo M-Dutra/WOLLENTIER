@@ -11,7 +11,7 @@
           <div class="card-body">
             <h6 class="card-subtitle "><%= offer.category %></h6>
             <p class="card-title"><strong><%= offer.title %></strong></p>
-            <p class="card-title"><%= offer.description %></p>
+            <p class="card-title"><%= offer.description.slice(0..256) + "..." %></p>
           </div>
         <% end %>
         </div>

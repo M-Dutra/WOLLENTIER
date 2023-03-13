@@ -19,6 +19,7 @@ class OffersController < ApplicationController
 
   def show
     @application = Application.new
+    @offers = Offer.where(category: @offer.category).where.not(id: @offer.id).limit(4)
     authorize @offer
     # authorize @application
   end

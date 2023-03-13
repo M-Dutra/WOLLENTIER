@@ -2,12 +2,12 @@
   justify-content: center;
 }
 
-.inflatable {
+.offer {
   height: 300px;
   overflow: hidden;
 }
 
-.inflatable-img {
+.offer-img {
   object-fit: cover;
   object-position: center;
   height: 100%;
@@ -58,15 +58,13 @@
   position: relative;
 }
 
-.price-label {
-  min-width: 56px;
-  height: 28px;
-  background-color: white;
+.card-body .card-offer-logo {
   position: absolute;
-  top: -28px;
-  left: 0px;
-  padding: 6px;
+  right: 16px;
+  top: 6px;
+  width: 40px;
 }
+
 
 .card-label {
   font-size: 10px;
@@ -141,4 +139,3 @@
   margin: 5px;
   padding: 5px;
 }
-
