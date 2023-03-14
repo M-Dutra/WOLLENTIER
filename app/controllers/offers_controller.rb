@@ -26,7 +26,7 @@ class OffersController < ApplicationController
       lng: @offer.longitude
     }]
     # authorize @application
-    @related_offers = Offer.where(category: @offer.category).where.not(id: @offer.id).group_by(&:category)
+    @related_offers = Offer.where(category: @offer.category).where.not(id: @offer.id).limit(4).group_by(&:category)
   end
 
   def new

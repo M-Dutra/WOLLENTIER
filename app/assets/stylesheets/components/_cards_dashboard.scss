@@ -72,6 +72,13 @@
   // width: 40px;
 }
 
+.card-offer-logo-show {
+  position: absolute;
+  right: 16px;
+  top: 6px;
+  width: 65px;
+}
+
 .card-badge {
   background-color: $w-blue;
   border-radius: 0  150px 150px 0;
@@ -79,6 +86,21 @@
   font-weight: bold;
   margin-left: -1rem;
   width: 65%;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  padding-right: 0.2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  font-size-adjust:0.5;
+}
+
+.card-badge-mdutra {
+  background-color: $w-blue;
+  border-radius: 0  150px 150px 0;
+  color: white;
+  font-weight: bold;
+  margin-left: 0px;
+  width: 20%;
   padding-left: 1rem;
   margin-bottom: 1rem;
   padding-right: 0.2rem;

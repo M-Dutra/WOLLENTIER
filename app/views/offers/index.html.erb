@@ -15,31 +15,34 @@
             <% end %>
           </div>
 
-          <%= form_with url: offers_path, method: :get do %>
-          <%= hidden_field_tag :query, "Seniors" %>
-            <button class="btn btn-category btn-circle btn-xl" id="Seniors">
-                <i class="fa-solid fa-person-cane fa-xl"></i>
-              <br>
+            <div class="d-flex">
+              <%= form_with url: offers_path, method: :get do %>
+              <%= hidden_field_tag :query, "Seniors" %>
+                <button class="btn btn-category btn-circle btn-xl" id="Seniors">
+                    <i class="fa-solid fa-person-cane fa-xl"></i>
+                  <br>
 
             </button>
             <p class="tags" style="color:black;">Seniors</p>
           <% end %>
 
-          <%= form_with url: offers_path, method: :get do %>
-          <%= hidden_field_tag :query, "Refugees" %>
-            <button class="btn btn-category btn-circle btn-xl" id="Refugees">
-              <i class="fa-solid fa-handshake fa-xl"></i>
-              <br>
+            <div class="d-flex">
+              <%= form_with url: offers_path, method: :get do %>
+              <%= hidden_field_tag :query, "Refugees" %>
+                <button class="btn btn-category btn-circle btn-xl" id="Refugees">
+                  <i class="fa-solid fa-handshake fa-xl"></i>
+                  <br>
 
             </button>
             <p class="tags" style="color:black;">Refugees</p>
           <% end %>
 
-          <%= form_with url: offers_path, method: :get do %>
-          <%= hidden_field_tag :query, "Community" %>
-            <button class="btn btn-category btn-circle btn-xl" id="Community">
-              <i class="fa-solid fa-heart-pulse fa-xl"></i>
-              <br>
+            <div class="d-flex">
+              <%= form_with url: offers_path, method: :get do %>
+              <%= hidden_field_tag :query, "Community" %>
+                <button class="btn btn-category btn-circle btn-xl" id="Community">
+                  <i class="fa-solid fa-heart-pulse fa-xl"></i>
+                  <br>
 
             </button>
             <p class="tags" style="color:black;">Community</p>
@@ -56,12 +59,12 @@
         </div>
       </div>
     </div>
+  </section>
+  <div>
+    <h2>All Wollentier jobs in Berlin</h2>
   </div>
-</section>
-<div>
-<h2>All Wollentier jobs in Berlin</h2>
-</div>
-<br>
+  <br>
+
   <div class="row row-cols-12 row-cols-md-4 g-4">
     <% @offers.each do |offer| %>
       <%= render partial: 'card_offer', locals: { offer: offer}  %>
