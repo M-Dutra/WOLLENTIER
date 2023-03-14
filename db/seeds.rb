@@ -818,13 +818,90 @@ brac_offer = Offer.new(
   of displacement and conflict. As a volunteer with BRAC, you may be involved in a range of initiatives and projects
   focused on refugees, depending on the needs of the organization and the community you are serving. Some possible tasks
   include: Providing educational and vocational training to refugees, to help them acquire new skills and build
-  livelihoods that can support themselves and their families.",
+  livelihoods that can support themselves and their families. Offering psychosocial support and counseling to refugees
+  who have experienced trauma and other forms of hardship, to help them heal and rebuild their lives. Supporting the
+  development of community-based organizations and networks that can advocate for the needs and rights of refugees,
+  and help build stronger, more resilient communities. Facilitating access to basic services and resources, such as
+  healthcare, water and sanitation, and housing, that are critical for the well-being of refugees. Building partnerships
+  with other organizations and stakeholders in the community, to promote collaboration and coordination in support of
+  refugees.",
   category: "Refugees",
   location: "Berlin",
   district: "Charlottenburg",
   start_date: "June 17",
-  frequency: "3 days / week",
+  frequency: "5 days / week",
   contact_person: "Manuel",
   organization_id: brac.id
 )
 brac_offer.save!
+
+oxfam_offer = Offer.new(
+  title: "Volunteer with Oxfam to Empower Kids and Create a Brighter Future",
+  description: "Oxfam is a global organization that is dedicated to fighting poverty, hunger, and injustice around the
+  world. As a volunteer with Oxfam, you can play a critical role in empowering kids and promoting education, health,
+  and well-being for children and their families. As a volunteer with Oxfam, you may be involved in a range of
+  initiatives and projects focused on kids, depending on the needs of the organization and the community
+  you are serving. Some possible tasks include: Supporting education and literacy programs for kids, to help them
+  acquire the skills and knowledge they need to succeed in school and in life. Promoting access to healthcare and
+  nutrition for kids, to ensure that they have the resources they need to stay healthy and thrive. Facilitating
+  community-based programs and activities that promote play, creativity, and socialization for kids, to help them
+  develop social and emotional skills and build stronger connections with their peers and caregivers. Advocating for
+  the rights and needs of kids, and working to create more just and equitable systems and policies that support
+  the well-being of all children. So if you're passionate about empowering kids and creating a brighter future for all,
+  consider volunteering with Oxfam. You can help create lasting change in the lives of children and families around the
+  world, and contribute to building a more just and equitable world for all.",
+  category: "Kids",
+  location: "Berlin",
+  district: "Tempelhof",
+  start_date: "July 10",
+  frequency: "8 hours / week",
+  contact_person: "Alex",
+  organization_id: oxfam.id
+)
+oxfam_offer.save!
+
+wv_offer = Offer.new(
+  title: "Volunteer with World Vision to Support Senior Citizens and Enhance their Well-being",
+  description: "World Vision is a humanitarian organization dedicated to improving the lives of vulnerable children,
+  families, and communities around the world. As a volunteer with World Vision, you can play a critical role in
+  supporting senior citizens and promoting their health, dignity, and well-being.
+  As a volunteer with World Vision, you may be involved in a range of initiatives and projects focused on seniors,
+  depending on the needs of the organization and the community you are serving. Some possible tasks include:
+  Providing companionship and social support to seniors, to help them feel less isolated and more connected to their
+  community. Facilitating health and wellness programs and activities for seniors, to help them stay active,
+  healthy, and engaged.",
+  category: "Seniors",
+  location: "Berlin",
+  district: "Lichtenberg",
+  start_date: "October 10",
+  frequency: "2 days / week",
+  contact_person: "Tulio",
+  organization_id: wv.id
+)
+wv_offer.save!
+
+wv_offer = Offer.new(
+  title: "Volunteer with World Vision to Support the Well-being of Senior Citizens",
+  description: "World Vision is a global organization that works to protect the rights and well-being of children around
+  the world. But did you know that World Vision is also involved in programs and initiatives that support senior
+  citizens and promote healthy aging? As a volunteer with World Vision, you can play an important role in supporting
+  senior citizens and helping to create more age-friendly communities. As a volunteer with World Vision,
+  you may be involved in a variety of activities and initiatives focused on seniors, depending on the needs of the
+  organization and the community you are serving. Some possible tasks include:
+  Providing social support and companionship to seniors, to help them feel more connected to their community and
+  reduce social isolation.
+  Advocating for the rights and needs of seniors, and working to create more equitable and inclusive systems and
+  policies that support the well-being of all senior citizens.
+  Providing education and resources on healthy aging, and promoting physical and mental health among seniors.
+  Supporting seniors who may be experiencing poverty, homelessness, or other challenges, and connecting them with
+  necessary resources and services. Supporting seniors who may be experiencing poverty, homelessness, or other
+  challenges, and connecting them with necessary resources and services.",
+  category: "Seniors",
+  location: "Berlin",
+  district: "Friedrichshain",
+  start_date: "October 2",
+  frequency: "1 day / week",
+  contact_person: "Tulio",
+  organization_id: wv.id
+)
+wv_offer.save!
