@@ -1,6 +1,19 @@
 class OrganizationsController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
+
+  def index
+    @organizations = policy_scope(Organization)
+    if params[:query].present?
+      sql_query = <<~SQL
+        organization.name @@ :query
+        OR organiziation.category @@ :query
+        OR organizations.description @@ :query
+      SQL
+      @organizations = @organizations.joins(:organization).where(sql_query, query: "%#{params[:query]}%")
+    end
+  end
+
   def show
     @organization = Organization.find(params[:id])
     authorize @organization
