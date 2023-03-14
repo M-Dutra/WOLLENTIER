@@ -50,13 +50,26 @@
 .card-body {
   position: relative;
   box-sizing: border-box;
+  height: 400px;
+}
+
+.card-body p {
+  padding: 10px 20px;
+  font-size: larger;
+  color:#000000
+}
+
+.card-district {
+  margin-top: 50px;
+  position: absolute;
+  bottom: 1px;
 }
 
 .card-body .card-offer-logo {
   position: absolute;
   right: 16px;
   top: 6px;
-  width: 40px;
+  // width: 40px;
 }
 
 .card-offer-logo-show {
