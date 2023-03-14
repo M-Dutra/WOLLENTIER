@@ -491,7 +491,7 @@ oxfam_offer = Offer.new(
 oxfam_offer.save!
 
 brac_offer = Offer.new(
-  title: "Join a Community Service Project and Make a Difference in Your NeighborhoodC",
+  title: "Join a Community Service Project and Make a Difference in Your Neighborhood",
   description: "Community service projects offer a valuable opportunity to give back to your neighborhood,
   meet new people, and make a positive impact in your community. By volunteering for a
   community service project, you can help support important causes and make a real
