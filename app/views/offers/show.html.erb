@@ -4,11 +4,11 @@
     <%# title and description %>
       <div class="col-8">
         <h1><%= @offer.title %></h1>
+        <h6 class="card-badge-mdutra"><%= @offer.category %></h4>
         <p><%= @offer.description %></p>
-        <h6><%= @offer.category %></h4>
         <!-- Button trigger modal -->
         <% if user_signed_in? && current_user.volunteer? %>
-        <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-primary-mdutra mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Apply for Job
         </button>
         <% end %>
@@ -16,7 +16,7 @@
       <div class="col-4">
         <div class="d-flex flex-column mb-5">
           <div class="p-2 position-relative">
-            <img class="position-absolute top-0 end-0" src="<%= @offer.organization.logo_url %>" />
+            <img class="position-absolute top-0 end-0 card-offer-logo-show" src="<%= @offer.organization.logo_url %>" />
             <h3><strong><%= @offer.organization.name %></strong></h3>
             <p>District: <%= @offer.district %></p>
             <p>Phone Number: <%= @offer.organization.user.phone_number %></p>
@@ -72,13 +72,13 @@
 
 <!-- further recommendations-->
 <section class="py-5 bg-light">
-  <div class="container px-4 px-lg-5 mt-5 fw-bolder">
-    <h1>Related Jobs</h1>
+  <div class="container px-4 px-lg-5 mt-5 fw-bolder g-4">
+    <h1 class="mx-2">Related Jobs</h1>
       <% @related_offers.each do |category, offers| %>
         <div class="card-group">
-          <h3 class="text-center mb-3"><%= category %></h3>
+          <h3 class="text-center mb-3"><% category %></h3>
           <% offers.each do |offer| %>
-            <div class="card h-100 card-style" style="width: 18rem;">
+            <div class="card h-100 card-style mx-2" style="width: 18rem;">
               <%= link_to offer_path(offer) do %>
                 <div class="card-body">
                   <div class="card-badge">
