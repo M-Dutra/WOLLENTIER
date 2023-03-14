@@ -1,11 +1,21 @@
 
+.navbar {
+  background-color: $w-blue;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding: 0 25px
+}
 
 .navbar-brand {
   color: white;
   font-weight: 1000;
   font-family: $headers-font;
   font-size: 26px;
+}
 
+.navbar_links_container {
+  width: 100%;
 }
 
 .nav-link {
