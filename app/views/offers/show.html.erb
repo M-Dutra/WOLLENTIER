@@ -53,14 +53,14 @@
           <% offers.each do |offer| %>
             <div class="card h-100 card-style" style="width: 18rem;">
               <%= link_to offer_path(offer) do %>
-                <div class="application">
-                  <img src="https://source.unsplash.com/random/" class="img-thumbnail" alt="...">
-                </div>
                 <div class="card-body">
-                  <h6 class="card-subtitle "><%= offer.category %></h6>
-                  <p class="card-title"><%= offer.title %></p>
-                  <div class="price-label text-center align-middle">
+                  <div class="card-badge">
+                    <span><%= offer.category %></span>
                   </div>
+                  <p class="card-title"><%= offer.title %></p>
+                  <p class="card-title" style=><%= offer.description.slice(0..128) + "..." %></p>
+                  <p class="card-title"><%= offer.district %></p>
+                  <img src="<%= offer.organization.logo_url %>" class="card-offer-logo avatar-bordered" />
                 </div>
               <% end %>
             </div>

@@ -2,12 +2,12 @@
   justify-content: center;
 }
 
-.inflatable {
+.offer {
   height: 300px;
   overflow: hidden;
 }
 
-.inflatable-img {
+.offer-img {
   object-fit: cover;
   object-position: center;
   height: 100%;
@@ -47,25 +47,31 @@
   text-decoration: none;
 }
 
-.card-price {
-  font-size: 16px;
-  color: #364aa6;
-  text-decoration: none;
-
-}
-
 .card-body {
   position: relative;
+  box-sizing: border-box;
 }
 
-.price-label {
-  min-width: 56px;
-  height: 28px;
-  background-color: white;
+.card-body .card-offer-logo {
   position: absolute;
-  top: -28px;
-  left: 0px;
-  padding: 6px;
+  right: 16px;
+  top: 6px;
+  width: 40px;
+}
+
+.card-badge {
+  background-color: $w-blue;
+  border-radius: 0  150px 150px 0;
+  color: white;
+  font-weight: bold;
+  margin-left: -1rem;
+  width: 65%;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  padding-right: 0.2rem;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  font-size-adjust:0.5;
 }
 
 .card-label {
@@ -80,7 +86,6 @@
 .card-date {
   margin: none;
   font-size: 16px;
-
 }
 
 
@@ -141,4 +146,3 @@
   margin: 5px;
   padding: 5px;
 }
-
