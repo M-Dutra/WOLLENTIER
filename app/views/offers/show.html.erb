@@ -1,7 +1,6 @@
 <%= render "shared/banner" %>
 <div class="container">
   <div class="row">
-
     <%# title and description %>
       <div class="col-8">
         <h1><%= @offer.title %></h1>
@@ -43,8 +42,36 @@
 
 
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Job application</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= render "applications/form", application: @application %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- PUNDIT - PLEASE ADD THE BUTTONS BELOW TO THEIR RELATED DIV-->
+<% if policy(@offer).edit? %>
+  <%= link_to "Edit this offer", edit_offer_path(@offer) %> |
+<% end %>
+<%= button_to "Delete this offer", @offer, method: :delete if policy(@offer).destroy? %>
+
+
 <!-- further recommendations-->
-<section class="py-5 bg-light" style="margin-top: 50px">
+<section class="py-5 bg-light">
   <div class="container px-4 px-lg-5 mt-5 fw-bolder">
     <h1>Related Jobs</h1>
       <% @related_offers.each do |category, offers| %>
@@ -69,28 +96,3 @@
     </div>
   </div>
 </section>
-
-<!-- PUNDIT - PLEASE ADD THE BUTTONS BELOW TO THEIR RELATED DIV-->
-<% if policy(@offer).edit? %>
-  <%= link_to "Edit this offer", edit_offer_path(@offer) %> |
-<% end %>
-<%= button_to "Delete this offer", @offer, method: :delete if policy(@offer).destroy? %>
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Job application</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <%= render "applications/form", application: @application %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>

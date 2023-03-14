@@ -4,38 +4,49 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="side-nav">
+<div class="sub-nav">
+  <ul class="d-flex flex-row justify-content-start container align-items-center">
+    <li class="nav-link mt-3 me-5"><p>Open jobs</p></li>
+    <li class="nav-link mt-3 me-5"><p>Applications</p></li>
+    <li class="nav-link mt-3"><p>Volunteers</p></li>
+  </ul>
+</div>
 
-    <div class="nav-link"><p>Open jobs</p></div>
-    <div class="nav-link"><p>Applications</p></div>
-    <div class="nav-link"><p>Volunteers</p></div>
-
-
-  </div>
-
-  <div class="dash-content">
-    <h3>Open jobs</h3>
-      <%= link_to "Add offer", new_offer_path, class:"btn btn-primary" %>
-          <% @offers.each do |offer| %>
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="card-group">
-              <div class="card h-100 card-style">
-                <div class="application">
-                  <img src="https://source.unsplash.com/random/" class="img-thumbnail" alt="...">
-                </div>
-                <%= link_to offer_path(offer) do %>
-                  <div class="card-body">
-                    <h6 class="card-subtitle "><%= offer.category %></h6>
-                    <p class="card-title"><%= offer.title %></p>
-                      <div class="price-label text-center align-middle">
-                        <h3 class="card-price"><%= offer.start_date %></h3>
-                      </div>
-                  </div>
-                <% end %>
+<div class="dash-content container">
+  <div class="open-jobs-container">
+    <div class="d-flex justify-content-between pt-3">
+      <div><h3>Open jobs</h3></div>
+      <div><%= link_to "Add offer", new_offer_path, class:"btn btn-primary" %></div>
+    </div>
+    <div class="row row-cols-12 row-cols-md-4 g-4 pt-3">
+      <% @offers.each do |offer| %>
+      <div class="card-group">
+        <div class="card h-100 card-style" style="width: 18rem;">
+          <%= link_to offer_path(offer) do %>
+            <div class="card-body">
+              <div class="card-badge">
+                <span><%= offer.category %></span>
               </div>
+              <p class="card-title"><strong><%= offer.title %></strong></p>
+              <p class="card-district"><%= offer.district %></p>
+              <img src="<%= offer.organization.logo_url %>" class="card-offer-logo avatar-bordered" />
             </div>
-          </div>
           <% end %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+    <div class="applications-container">
+      <div>
+        
+      </div>
+
+
+    </div>
+
+    <div class="volunteers-container">
+    </div>
+
   </div>
 </div>

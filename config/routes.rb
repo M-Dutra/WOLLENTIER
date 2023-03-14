@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   resources :users, only: %i[edit update] do
     get :profile
   end
-  resources :organizations, only: %i[show new create]
+  resources :organizations, only: %i[show new create index]
+  # resources :organizations, only: [:index]
 
   devise_for :users, controllers: { registrations: "registrations" }
 

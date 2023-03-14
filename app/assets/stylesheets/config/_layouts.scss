@@ -1,0 +1,14 @@
+html, body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.body_container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background-color: #e6ecee;
+}

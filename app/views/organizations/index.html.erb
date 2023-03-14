@@ -1,0 +1,23 @@
+<div class="container">
+  <div>
+  <h2>All Organizations in Berlin</h2>
+  </div>
+<br>
+  <div class="row row-cols-12 row-cols-md-4 g-4">
+    <% @organizations.each do |organization| %>
+      <div class="card-group">
+        <div class="card h-100 card-style" style="width: 18rem;">
+          <%= link_to organization_path(organization) do %>
+          <div class="card-body">
+            <div class="card-badge">
+            </div>
+            <p class="card-title"><strong><%= organization.name %></strong></p>
+            <p class="card-title"><%= organization.description.slice(0..200) + "..." %></p>
+            <img src="<%= organization.logo_url %>" class="card-offer-logo avatar-bordered" />
+          </div>
+        <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

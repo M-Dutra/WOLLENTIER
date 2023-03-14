@@ -1,10 +1,10 @@
-<div class="container">
+<div>
   <nav class="navbar navbar-dark navbar-expand-lg">
-    <div class="container d-flex justify-content-between" style="padding: 0 !important">
+    <div class="d-flex justify-content-between navbar_links_container">
       <div class="d-flex align-items-center">
         <%= link_to "WOLLENTIER", root_path, class: "navbar-brand" %>
-          <%= link_to "Jobs", offers_path, method: :get, class: "main-nav-link nav-spacing" %>
-          <%= link_to "Organizations", offers_path, method: :get, class: "main-nav-link" %>
+        <%= link_to "Jobs", offers_path, method: :get, class: "main-nav-link nav-spacing" %>
+        <%= link_to "Organizations", organizations_path, method: :get, class: "main-nav-link" %>
       </div>
         <%# <form class="d-flex" role="links"> %>
             <ul class="navbar-nav d-flex align-items-center">
