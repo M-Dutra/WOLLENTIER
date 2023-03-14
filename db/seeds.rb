@@ -313,7 +313,7 @@ wv_offer = Offer.new(
   title: "World Vision",
   description: "Make a difference in the lives of furry friends by volunteering at a local animal shelter.
   Tasks may include walking dogs, cleaning kennels, and assisting with adoptions.",
-  category: "Kids",
+  category: "Animal",
   location: "Berlin",
   district: "Charlottenburg",
   start_date: "March 17th",
