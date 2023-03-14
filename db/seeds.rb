@@ -274,7 +274,7 @@ irc = Organization.new(
   website: "www.rescue.org",
   opening_time: "10 am",
   user_id: leo.id,
-  logo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/International_Rescue_Committee_Logo.svg/767px-International_Rescue_Committee_Logo.svg.png"
+  logo_url: "https://recruitmentreport.com.ng/wp-content/uploads/2022/03/IRC.png"
 )
 irc.save!
 
