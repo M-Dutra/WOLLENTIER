@@ -1,0 +1,31 @@
+.banner {
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  padding: 150px 0;
+  margin-bottom: 50px;
+}
+
+.banner-home {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  padding-top: 75px;
+
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.banner-home h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 0px 0px 3px rgba(0,0,0,0.2);
+  font-size: 56px;
+  font-weight: bold;
+}
