@@ -3,8 +3,9 @@ class OffersController < ApplicationController
   skip_before_action :authenticate_user!, only: %i[index show]
 
   def index
-    @offers = policy_scope(Offer)
+    @offers = policy_scope(Offer).includes(:organization)
     if params[:query].present?
+      query = "%#{params[:query]}%"
       sql_query = <<~SQL
         offers.title @@ :query
         OR offers.description @@ :query
@@ -13,8 +14,10 @@ class OffersController < ApplicationController
         OR organizations.name @@ :query
         OR organizations.description @@ :query
       SQL
-      # @offers = @offers.joins(:organization).where(sql_query, query: "%#{params[:query]}%")
-      @offers = @offers.where(category: params[:query])
+      @offers = @offers.joins(:organization).where(sql_query, query:).or(@offers.where(category: params[:query]))
+      if @offers.empty? && params[:query].present?
+        @offers = Offer.all.includes(:organization)
+      end
     end
   end
 

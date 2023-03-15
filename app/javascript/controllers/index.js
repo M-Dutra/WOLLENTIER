@@ -12,3 +12,15 @@ application.register("hello", HelloController)
 
 import MapController from "./map_controller"
 application.register("map", MapController)
+
+// document.addEventListener('DOMContentLoaded', function() {
+//   const filterButtons = document.querySelectorAll('[data-filter]');
+
+//   filterButtons.forEach(function(button) {
+//     button.addEventListener('click', function() {
+//       const filter = button.dataset.filter;
+//       const filterHeading = document.getElementById('filter-heading');
+//       filterHeading.innerText = `All ${filter} Wollentier jobs in Berlin`;
+//     });
+//   });
+// });
