@@ -9,30 +9,27 @@
 
 
 .application-tag-user {
-
-  padding: 2px 5px 0px 5px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 10px;
+  padding: 4px 8px 0px 8px;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 12px;
   text-transform: uppercase;
-  position: absolute;
-  top: -300px;
-  right: 0;
+  font-family: $headers-font;
 }
 
   .application-tag-pending {
     margin: 20px 20px;
     padding-bottom: 1px;
-    background-color: #e9e0e0;
+    background-color: #d2e0e8;
     color: rgb(114, 114, 114);
-    border: 1px rgb(114, 114, 114) solid;
+    // border: 1px rgb(114, 114, 114) solid;
   }
 
   .application-tag-accepted {
     margin: 20px 20px;
     padding-bottom: 1px;
     background-color: #c4f0db;
-    border: 1px $success-green solid;
+    // border: 1px $success-green solid;
     color: $success-green;
   }
 
@@ -41,7 +38,7 @@
     margin: 20px 20px;
     padding-bottom: 1px;
     background-color: #f3c8cc;
-    border: 1px $danger-red solid;
+    // border: 1px $danger-red solid;
     color: $danger-red;
   }
 

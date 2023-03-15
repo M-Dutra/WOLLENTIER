@@ -23,44 +23,36 @@
         <%= render partial: 'offers/card_offer', locals: { offer: offer}  %>
       <% end %>
     </div>
+  </div>
+
 
     <%# <div class="applications-container">
       <div class="container"> %>
-  <h3>Applications for my job offers</h3>
+  <h3 class="mt-4">Applications for my job offers</h3>
 
 
 
 
 
-
-<% @applications.each do |application| %>
-  <div class="application-container d-flex align-items-center justify-content-between">
-    <div class="d-flex align-items-center ms-3">
-      <img class="avatar-large" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2960&q=80">
-      <h5 class="card-title ms-4"><%= application.title %></h5>
-    </div>
-    <p class="district-style"><%= (application.created_at).strftime("%A, %d %b %Y %l:%M %p") %></p>
-    <p class="application-tag-user application-tag-<%= application.status.nil? ? "pending": application.status.downcase %>"><%= application.status.nil? ? "Pending": application.status.downcase  %></p>
-    <div class="application-actions d-flex align-items-center">
-    <button type="button" class="btn btn-secondary me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      Details
-    </button>
-    <p class='application-tag'><%= application.status %></p>
-    </div>
+  <div class="applications-container">
+    <% @applications.each do |application| %>
+      <div class="application-container d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center ms-3">
+          <%# <img class="avatar-large" src="<% application.user_id.profile_url %>"> %>
+          <h5 class="card-title ms-4"><%= application.title %></h5>
+        </div>
+        <div class="d-flex align-items-center">
+          <p class="application-time me-5"><%= (application.created_at).strftime("%A, %d %b %Y %l:%M %p") %></p>
+          <div class="application-actions d-flex align-items-center">
+          <p class="application-tag-user application-tag-<%= application.status.nil? ? "pending": application.status.downcase %>"><%= application.status.nil? ? "Pending": application.status.downcase  %></p>
+          <button type="button" class="btn btn-secondary me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Details
+          </button>
+        </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
 
-<%# </div>
-
-
-
-
-
-
-    </div>
-
-    <div class="volunteers-container">
-    </div>
-
-  </div>
-</div> %>
+</div>
