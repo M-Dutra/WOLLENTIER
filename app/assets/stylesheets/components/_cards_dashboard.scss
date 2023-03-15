@@ -31,7 +31,7 @@
 }
 
 .card-title {
-  font-size: 16px;
+  font-size: 18px;
   color: #000000;
   text-decoration: none;
 
@@ -54,12 +54,13 @@
 }
 
 .card-body p {
+  font-size: 18px;
   padding: 10px 20px;
-  font-size: larger;
+  // font-size: larger;
   color:#000000
 }
 
-.card-district {
+.card-frequency {
   margin-top: 50px;
   position: absolute;
   bottom: 1px;
