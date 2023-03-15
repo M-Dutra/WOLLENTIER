@@ -13,7 +13,8 @@ class OffersController < ApplicationController
         OR organizations.name @@ :query
         OR organizations.description @@ :query
       SQL
-      @offers = @offers.joins(:organization).where(sql_query, query: "%#{params[:query]}%")
+      # @offers = @offers.joins(:organization).where(sql_query, query: "%#{params[:query]}%")
+      @offers = @offers.where(category: params[:query])
     end
   end
 
@@ -26,7 +27,7 @@ class OffersController < ApplicationController
       lng: @offer.longitude
     }]
     # authorize @application
-    @related_offers = Offer.where(category: @offer.category).where.not(id: @offer.id).group_by(&:category)
+    @related_offers = Offer.where(category: @offer.category).where.not(id: @offer.id).limit(4).group_by(&:category)
   end
 
   def new
