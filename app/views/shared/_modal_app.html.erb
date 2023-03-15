@@ -1,0 +1,32 @@
+<div class="modal fade" id="modal-<%= applicant %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle"><%= application.title %></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= application.message %>
+      </div>
+      <div class="modal-footer">
+        <% if application.status.nil? %>
+          <div >
+            <%= simple_form_for application do |f| %>
+              <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+              <%= f.submit 'Accept', class: 'btn btn-primary' %>
+            <% end %>
+          </div>
+          <div>
+            <%= simple_form_for application do |f| %>
+              <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+              <%= f.submit 'Reject', class: 'btn btn-secondary' %>
+            <% end %>
+          </div>
+        <% else %>
+          <p class='application-tag'><%= application.status %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

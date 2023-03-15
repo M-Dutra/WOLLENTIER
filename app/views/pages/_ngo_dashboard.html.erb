@@ -38,21 +38,26 @@
     <% @applications.each do |application| %>
       <div class="application-container d-flex align-items-center justify-content-between">
         <div class="d-flex align-items-center ms-3">
-          <%# <img class="avatar-large" src="<% application.user_id.profile_url %>"> %>
+          <div class="avatar-large" style="background-image: url(<%= application.user.profile_url %>)">
+            <img src="">
+          </div>
           <h5 class="card-title ms-4"><%= application.title %></h5>
         </div>
         <div class="d-flex align-items-center">
           <p class="application-time me-5"><%= (application.created_at).strftime("%A, %d %b %Y %l:%M %p") %></p>
           <div class="application-actions d-flex align-items-center">
           <p class="application-tag-user application-tag-<%= application.status.nil? ? "pending": application.status.downcase %>"><%= application.status.nil? ? "Pending": application.status.downcase  %></p>
-          <button type="button" class="btn btn-secondary me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button type="button" class="btn btn-secondary me-4" data-bs-toggle="modal" data-bs-target="#modal-<%= application.id %>">
             Details
           </button>
         </div>
         </div>
       </div>
+    <%= render "shared/modal_app", application: application, applicant: application.id %>
     <% end %>
   </div>
 </div>
+
+
 
 </div>
