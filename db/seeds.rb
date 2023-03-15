@@ -15,7 +15,8 @@ toni = User.new(
   password: "123456",
   phone_number: "4915503173420",
   interests: "Kids",
-  role: "organization"
+  role: "organization",
+  profile_url: "https://media.istockphoto.com/id/1352463046/de/foto/headshot-einer-selbstbewussten-reifen-geschäftsfrau.jpg?s=612x612&w=0&k=20&c=hldGrb8P-DsmCGlIpeFAWNuXchOGTMfppUJmRZRJHS4="
 )
 toni.save!
 
@@ -103,7 +104,8 @@ eli = User.new(
   password: "123456",
   phone_number: "4930108612836",
   interests: "Sports",
-  role: "volunteer"
+  role: "volunteer",
+  profile_url: "https://media.istockphoto.com/id/1399788030/pt/foto/portrait-of-young-confident-indian-woman-pose-on-background.jpg?b=1&s=170667a&w=0&k=20&c=sCGVbWqQHgvH839EqFnJxKsXwRX1FzYFi2qxxmBWxGM="
 )
 eli.save!
 
@@ -114,7 +116,8 @@ lucas = User.new(
   password: "123456",
   phone_number: "4930089613211",
   interests: "Highlights",
-  role: "volunteer"
+  role: "volunteer",
+  profile_url: "https://media.istockphoto.com/id/1388253782/pt/foto/positive-successful-millennial-business-professional-man-head-shot-portrait.jpg?b=1&s=170667a&w=0&k=20&c=JXYxqMm0ZTdc3sdZ2MLQhDnwU0IXqUFwNH4C2Iv3MlE="
 )
 lucas.save!
 
@@ -125,7 +128,8 @@ louise = User.new(
   password: "123456",
   phone_number: "4930087324980",
   interests: "Music",
-  role: "volunteer"
+  role: "volunteer",
+  profile_url: "https://media.istockphoto.com/id/1407759041/pt/foto/confident-happy-beautiful-hispanic-student-girl-indoor-head-shot-portrait.jpg?b=1&s=170667a&w=0&k=20&c=rQ7clIRvX6gzldKrvh1PhhemN7X4YRHmM8alK6RqzzM="
 )
 louise.save!
 
@@ -136,7 +140,8 @@ soline = User.new(
   password: "123456",
   phone_number: "4930737860946",
   interests: "Advocacy",
-  role: "volunteer"
+  role: "volunteer",
+  profile_url: "https://media.istockphoto.com/id/1311084168/de/foto/überglückliche-hübsche-asiatische-frau-schauen-in-die-kamera-mit-aufrichtigem-lachen.jpg?s=612x612&w=0&k=20&c=T4fIt4-BxMgvyoVEXuFC5KolixxFL-BtB-lC9RWg_ho="
 )
 soline.save!
 
@@ -147,7 +152,8 @@ katja = User.new(
   password: "123456",
   phone_number: "4930738769431",
   interests: "Human Rights",
-  role: "volunteer"
+  role: "volunteer",
+  profile_url: "https://media.istockphoto.com/id/1329936184/de/foto/kopfschuss-porträt-einer-lächelnden-geschäftsfrau-die-in-die-kamera-schaut.jpg?s=612x612&w=0&k=20&c=15DzZOFJNj3F8AdSSVtyW8SSzJmFL_yOJMXjsK8eh3g="
 )
 katja.save!
 
@@ -157,8 +163,9 @@ olivier = User.new(
   email: "olivier@volunteer.com",
   password: "123456",
   phone_number: "4930607269357",
-  interests: "Animals",
-  role: "volunteer"
+  interests: "Community",
+  role: "volunteer",
+  profile_url: "https://media.istockphoto.com/id/1309328823/de/foto/headshot-porträt-von-lächelnden-männlichen-angestellten-im-büro.jpg?s=612x612&w=0&k=20&c=7T8_yMp5luC4WlMki87U2lCrlVlGXZBtL8Hn3Av5LKk="
 )
 olivier.save!
 
@@ -168,10 +175,71 @@ lauren = User.new(
   email: "lauren@volunteer.com",
   password: "123456",
   phone_number: "4930108612836",
-  interests: "Environment",
-  role: "volunteer"
+  interests: "Refugees",
+  role: "volunteer",
+  profile_url: "https://media.istockphoto.com/id/1318482009/de/foto/junge-frau-bereit-für-den-job-geschäftskonzept.jpg?s=612x612&w=0&k=20&c=O3bhsOPXofWOvWoxYtG02XlZvdo0ytS7Pn0PK-aLsjc="
 )
 lauren.save!
+
+alberto = User.new(
+  first_name: "Alberto",
+  last_name: "Junior",
+  email: "alberto@volunteer.com",
+  password: "123456",
+  phone_number: "4930108612836",
+  interests: "Seniors",
+  role: "volunteer",
+  profile_url: "https://media.istockphoto.com/id/544979402/de/foto/porträt-eines-schweren-jungen-mannes.jpg?s=612x612&w=0&k=20&c=kPsNnvyEkr5cgNDXMAvgHjlbFsMFnMm_Xx20sbqr0is="
+)
+alberto.save!
+
+pedro = User.new(
+  first_name: "Pedro",
+  last_name: "Miranda",
+  email: "pedro@volunteer.com",
+  password: "123456",
+  phone_number: "4930108612836",
+  interests: "Kids",
+  role: "volunteer",
+  profile_url: "https://media.istockphoto.com/id/1338134336/pt/foto/headshot-portrait-african-30s-man-smile-look-at-camera.jpg?b=1&s=170667a&w=0&k=20&c=SFQyWuhNqsI4YypI1rQEwV3yv9RMzkHoXaHrz_Jkft8="
+)
+pedro.save!
+
+ronaldinho = User.new(
+  first_name: "Ronaldinho",
+  last_name: "Gaucho",
+  email: "ronaldinho@volunteer.com",
+  password: "123456",
+  phone_number: "4930108612836",
+  interests: "Sports",
+  role: "volunteer",
+  profile_url: "https://media.istockphoto.com/id/1390042774/de/foto/porträt-eines-lächelnden-eleganten-geschäftsmannes-der-in-die-kamera-schaut.jpg?s=612x612&w=0&k=20&c=bq2ECg2Z1DEmTPFSzGdYxZed91YZqC8SihdXQRDHmzg="
+)
+ronaldinho.save!
+
+michael = User.new(
+  first_name: "Michael",
+  last_name: "Jacson",
+  email: "michael@volunteer.com",
+  password: "123456",
+  phone_number: "4930108612836",
+  interests: "Music",
+  role: "volunteer",
+  profile_url: "https://media.istockphoto.com/id/1320207978/de/foto/kopfschuss-lächelnd-geschäftsmann-trägt-brille-im-büro-stehend.jpg?s=612x612&w=0&k=20&c=pxfD6oW-ApaSzCKRj4tjl_JFrtNPS6mRpdeBpbQe_T8="
+)
+michael.save!
+
+taylor = User.new(
+  first_name: "Taylor",
+  last_name: "Swift",
+  email: "taylor@volunteer.com",
+  password: "123456",
+  phone_number: "4930108612836",
+  interests: "Community",
+  role: "volunteer",
+  profile_url: "https://media.istockphoto.com/id/1437816897/pt/foto/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring-or.jpg?b=1&s=170667a&w=0&k=20&c=cpeePSCsbsTQNZkyw31mcmgudO69CPELyCWoEAfKUsI="
+)
+taylor.save!
 
 stc = Organization.new(
   name: "Save the Children",
@@ -185,9 +253,9 @@ stc = Organization.new(
   location: "Berlin",
   website: "www.savethechildren.de",
   opening_time: "9 am",
-  user_id: toni.id,
   logo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREwNxHG0y69nqVx0i_FW9220qA9rA-Zd74WRha582llA&s"
 )
+stc.user = toni
 stc.save!
 
 oxfam = Organization.new(
@@ -341,7 +409,7 @@ wv_offer = Offer.new(
 )
 wv_offer.save!
 
-wv_offer = Offer.new(
+wv2_offer = Offer.new(
   title: "Volunteer to Help Seniors in Your Community",
   description: "As the population ages, there is an increasing need for support and care for seniors in
   communities around the world. By volunteering to help seniors, you can make a meaningful
@@ -370,9 +438,9 @@ wv_offer = Offer.new(
   contact_person: "Tulio",
   organization_id: wv.id
 )
-wv_offer.save!
+wv2_offer.save!
 
-stc_offer = Offer.new(
+stc1_offer = Offer.new(
   title: "Make a Difference in Children's Lives as a Volunteer",
   description: "Children are the future, and helping them grow and thrive is one of the most rewarding
   things you can do as a volunteer. Whether you have experience working with children or are
@@ -399,7 +467,7 @@ stc_offer = Offer.new(
   contact_person: "Toni",
   organization_id: stc.id
 )
-stc_offer.save!
+stc1_offer.save!
 
 stc_offer = Offer.new(
   title: "Help Kids Explore Their Creativity as a Volunteer in an Arts Program",
@@ -429,7 +497,7 @@ stc_offer = Offer.new(
 )
 stc_offer.save!
 
-stc_offer = Offer.new(
+stc2_offer = Offer.new(
   title: "Join a Youth Mentoring Program and Help Kids Reach Their Full Potential",
   description: "Mentoring programs offer a valuable opportunity for kids to receive support, guidance, and
   encouragement from caring adult volunteers. By volunteering as a youth mentor, you can
@@ -455,7 +523,7 @@ stc_offer = Offer.new(
   contact_person: "Toni",
   organization_id: stc.id
 )
-stc_offer.save!
+stc2_offer.save!
 
 oxfam_offer = Offer.new(
   title: "Make a Difference in Your Community: Volunteer for a Local Outreach Program",
@@ -644,7 +712,7 @@ dwb_offer = Offer.new(
 )
 dwb_offer.save!
 
-gw_offer = Offer.new(
+gw1_offer = Offer.new(
   title: "Help Build Resilient Communities and a Sustainable Future as a Volunteer",
   description: "  Volunteering with a community and environmental organization is a powerful way to make a
   positive impact on the world around you. By working to build resilient communities and promote
@@ -679,9 +747,9 @@ gw_offer = Offer.new(
   contact_person: "Besher",
   organization_id: gw.id
 )
-gw_offer.save!
+gw1_offer.save!
 
-dwb_offer = Offer.new(
+dwb1_offer = Offer.new(
   title: "Make a Difference in Children's Lives as a Volunteer with Doctors Without Borders",
   description: "Volunteering with Doctors Without Borders (MSF) is a unique opportunity to help make a
   positive impact on the lives of children around the world who are affected by conflict,
@@ -706,7 +774,7 @@ dwb_offer = Offer.new(
   contact_person: "Jonas",
   organization_id: dwb.id
 )
-dwb_offer.save!
+dwb1_offer.save!
 
 amnesty_offer = Offer.new(
   title: "Support Refugees and Advocate for Their Rights as a Volunteer with Amnesty International",
@@ -735,7 +803,7 @@ amnesty_offer = Offer.new(
 )
 amnesty_offer.save!
 
-oxfam_offer = Offer.new(
+oxfam1_offer = Offer.new(
   title: "Volunteer with Oxfam to Help Seniors in Your Community",
   description: "As a volunteer with Oxfam, you can make a real difference in the lives of seniors in your
   community. Oxfam works to combat poverty and injustice around the world, and one of the ways that we do this is by
@@ -758,9 +826,9 @@ oxfam_offer = Offer.new(
   contact_person: "Alex",
   organization_id: oxfam.id
 )
-oxfam_offer.save!
+oxfam1_offer.save!
 
-brac_offer = Offer.new(
+brac1_offer = Offer.new(
   title: "Volunteer with Oxfam to Help Seniors in Your Community",
   description: "As a volunteer with Oxfam, you can make a real difference in the lives of seniors in your community.
   Oxfam works to combat poverty and injustice around the world, and one of the ways that we do this is by providing
@@ -783,9 +851,9 @@ brac_offer = Offer.new(
   contact_person: "Manuel",
   organization_id: brac.id
 )
-brac_offer.save!
+brac1_offer.save!
 
-irc_offer = Offer.new(
+irc1_offer = Offer.new(
   title: "Volunteer with IRC to Support Refugees in Your Community",
   description: "As a volunteer with the International Rescue Committee (IRC), you can play a critical role in
   helping refugees who have been forced to flee their homes due to conflict, persecution, and
@@ -808,9 +876,9 @@ irc_offer = Offer.new(
   contact_person: "Leo",
   organization_id: irc.id
 )
-irc_offer.save!
+irc1_offer.save!
 
-brac_offer = Offer.new(
+brac1_offer = Offer.new(
   title: "Volunteer with BRAC to Empower Refugees and Build Resilient Communities",
   description: "BRAC is a global development organization that is dedicated to empowering people living in poverty,
   particularly women and girls, and promoting inclusive and sustainable development. As a volunteer with BRAC, you can
@@ -833,9 +901,9 @@ brac_offer = Offer.new(
   contact_person: "Manuel",
   organization_id: brac.id
 )
-brac_offer.save!
+brac1_offer.save!
 
-oxfam_offer = Offer.new(
+oxfam2_offer = Offer.new(
   title: "Volunteer with Oxfam to Empower Kids and Create a Brighter Future",
   description: "Oxfam is a global organization that is dedicated to fighting poverty, hunger, and injustice around the
   world. As a volunteer with Oxfam, you can play a critical role in empowering kids and promoting education, health,
@@ -858,9 +926,9 @@ oxfam_offer = Offer.new(
   contact_person: "Alex",
   organization_id: oxfam.id
 )
-oxfam_offer.save!
+oxfam2_offer.save!
 
-wv_offer = Offer.new(
+wv3_offer = Offer.new(
   title: "Volunteer with World Vision to Support Senior Citizens and Enhance their Well-being",
   description: "World Vision is a humanitarian organization dedicated to improving the lives of vulnerable children,
   families, and communities around the world. As a volunteer with World Vision, you can play a critical role in
@@ -878,9 +946,9 @@ wv_offer = Offer.new(
   contact_person: "Tulio",
   organization_id: wv.id
 )
-wv_offer.save!
+wv3_offer.save!
 
-wv_offer = Offer.new(
+wv4_offer = Offer.new(
   title: "Volunteer with World Vision to Support the Well-being of Senior Citizens",
   description: "World Vision is a global organization that works to protect the rights and well-being of children around
   the world. But did you know that World Vision is also involved in programs and initiatives that support senior
@@ -904,4 +972,91 @@ wv_offer = Offer.new(
   contact_person: "Tulio",
   organization_id: wv.id
 )
-wv_offer.save!
+wv4_offer.save!
+
+eli_application_wv = Application.new(
+  title: "Join World Vision as a Community Development Volunteer",
+  message: "I am writing to apply for the Community Development Volunteer position at World Vision. As someone who is
+  passionate about community development and empowering people, I am excited about the opportunity to work with an
+  organization that shares these values.",
+  offer_id: wv_offer.id,
+  user_id: eli.id
+)
+eli_application_wv.save!
+
+soline_application_wv = Application.new(
+  title: "Join World Vision as a Community Development Volunteer",
+  message: "As a Community Development Volunteer at World Vision, I would be honored to support your mission of
+  improving the lives of vulnerable children and communities around the world. I am committed to working collaboratively
+  with community members to identify their needs, strengths, and challenges, and to develop effective strategies to
+  address them. I am also passionate about advocating for the rights of children and ensuring that their voices are
+  heard.",
+  offer_id: wv_offer.id,
+  user_id: soline.id
+)
+soline_application_wv.save!
+
+louise_application_wv = Application.new(
+  title: "Join World Vision as a Community Development Volunteer",
+  message: "I am excited to apply for the Community Development Volunteer position at World Vision. With a Bachelor's
+  degree in International Development and experience working with diverse communities, I am eager to bring my skills
+  and passion to support World Vision's mission of improving the lives of vulnerable children and communities. I have
+  experience in community organizing, data analysis, and project management, and I am committed to working with
+  community members to build sustainable solutions that address their unique needs.",
+  offer_id: wv_offer.id,
+  user_id: louise.id
+)
+louise_application_wv.save!
+
+lucas_application_wv = Application.new(
+  title: "Join World Vision as a Community Development Volunteer",
+  message: "I am thrilled to apply for the Community Development Volunteer role at World Vision. As someone who is
+  deeply committed to social justice and empowering underserved communities, I believe that World Vision's focus on
+  child protection and community-led development aligns perfectly with my personal and professional values.",
+  offer_id: wv_offer.id,
+  user_id: lucas.id
+)
+lucas_application_wv.save!
+
+taylor_application_wv = Application.new(
+  title: "Join World Vision as a Community Development Volunteer",
+  message: "I am writing to express my interest in the Community Development Volunteer position at World Vision. With a
+  Master's degree in Public Health and experience working in community-based settings, I am excited about the
+  opportunity to work with World Vision to improve health outcomes and promote wellbeing among vulnerable populations.",
+  offer_id: wv_offer.id,
+  user_id: taylor.id
+)
+taylor_application_wv.save!
+
+katja_application_wv = Application.new(
+  title: "Dear World Vision Recruitment Team",
+  message: "I am excited to apply for the Community Development Volunteer position at World Vision. As a recent graduate
+  with a Bachelor's degree in Social Entrepreneurship, I am passionate about using business principles to create
+  positive social impact. I have experience working with underserved communities in both urban and rural settings, a
+  nd I am skilled in project management, social media marketing, and community outreach. I am committed to using my
+  skills and knowledge to help World Vision achieve its mission of empowering vulnerable children and communities.",
+  offer_id: wv_offer.id,
+  user_id: katja.id
+)
+katja_application_wv.save!
+
+olivier_application_wv = Application.new(
+  title: "Dear World Vision Hiring Team",
+  message: "I am writing to apply for the Community Development Volunteer role at World Vision, as I believe that my
+  experience and passion align with your organization's mission to create lasting change in communities worldwide.
+  With a Bachelor's degree in Sociology and experience working in advocacy and grassroots organizing, I am eager to
+  contribute my skills in community engagement, strategic planning, and event coordination to support World Vision's
+  programs.",
+  offer_id: wv_offer.id,
+  user_id: olivier.id
+)
+olivier_application_wv.save!
+
+michael_application_wv = Application.new(
+  title: "Join World Vision as a Community Development Volunteer ",
+  message: "I am committed to working collaboratively with community members to identify and address their needs, and
+  to ensure that their voices are heard.",
+  offer_id: wv_offer.id,
+  user_id: michael.id
+)
+michael_application_wv.save!
