@@ -1060,3 +1060,38 @@ michael_application_wv = Application.new(
   user_id: michael.id
 )
 michael_application_wv.save!
+
+eli_application_oxfam2 = Application.new(
+  title: "Dear Hiring Manager,",
+  message: "I am excited to apply for the position of Children's Program Volunteer at Oxfam. As someone who is
+  passionate about working with kids and promoting their rights, I believe that Oxfam's focus on empowering vulnerable
+  communities aligns perfectly with my personal and professional values. With a Bachelor's degree in Education and
+  experience working with children in both formal and informal settings, I am eager to contribute my skills and
+  enthusiasm to support Oxfam's mission.",
+  offer_id: oxfam2_offer.id,
+  user_id: eli.id
+)
+eli_application_oxfam2.save!
+
+eli_application_brac1 = Application.new(
+  title: "Volunteer opportunity at BRAC,",
+  message: "I am writing to express my interest in the position of Refugee Program Coordinator at BRAC. As someone who
+  is passionate about supporting refugees and promoting their rights, I believe that BRAC's focus on empowering
+  marginalized communities aligns perfectly with my personal and professional values. With a Master's degree in
+  International Development and experience working with refugees in both urban and rural settings, I am eager to
+  contribute my skills and expertise to support BRAC's mission.",
+  offer_id: brac1_offer.id,
+  user_id: eli.id
+)
+eli_application_brac1.save!
+
+eli_application_irc1 = Application.new(
+  title: "Super eager to help!,",
+  message: "I am writing to express my strong interest in the position of Refugee Protection Officer at the
+  International Rescue Committee (IRC). With a Master's degree in International Human Rights Law and experience working
+  with refugees in both the Middle East and Africa, I am eager to contribute my skills and expertise to support IRC's
+  mission of providing lifesaving assistance to refugees and other vulnerable populations.",
+  offer_id: irc1_offer.id,
+  user_id: eli.id
+)
+eli_application_irc1.save!
