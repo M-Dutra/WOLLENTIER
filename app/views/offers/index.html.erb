@@ -1,67 +1,68 @@
 <div class="container">
-<section id="main" class="hero d-flex align-items-center justify-content-center">
-  <div class="container">
-    <div>
-      <div class="col-lg-5 d-flex flex-column" data-controller="filter" data-filter-offers-value="<%= @offers.to_json %>">
-        <div class="d-flex justify-content-between mt-4">
-          <div>
+
+  <section id="main" class="hero d-flex align-items-center justify-content-center">
+    <div class="container">
+      <div>
+        <div class="col-lg-5 d-flex flex-column" data-controller="filter" data-filter-offers-value="<%= @offers.to_json %>">
+          <div class="d-flex justify-content-between mt-4">
+            <div>
+              <%= form_with url: offers_path, method: :get do %>
+              <%= hidden_field_tag :query, "Kids" %>
+                <button class="btn btn-category btn-circle btn-xl" id="Kids" data-filter="Kids">
+                    <i class="fa-solid fa-children fa-xl"></i>
+                  <br>
+                </button>
+                <p class="tags" style="color:black;">Kids</p>
+              <% end %>
+            </div>
+
+              <div class="d-flex">
+                <%= form_with url: offers_path, method: :get do %>
+                <%= hidden_field_tag :query, "Seniors" %>
+                  <button class="btn btn-category btn-circle btn-xl" id="Seniors">
+                      <i class="fa-solid fa-person-cane fa-xl"></i>
+                    <br>
+
+              </button>
+              <p class="tags" style="color:black;">Seniors</p>
+            <% end %>
+
+              <div class="d-flex">
+                <%= form_with url: offers_path, method: :get do %>
+                <%= hidden_field_tag :query, "Refugees" %>
+                  <button class="btn btn-category btn-circle btn-xl" id="Refugees">
+                    <i class="fa-solid fa-handshake fa-xl"></i>
+                    <br>
+
+              </button>
+              <p class="tags" style="color:black;">Refugees</p>
+            <% end %>
+
+              <div class="d-flex">
+                <%= form_with url: offers_path, method: :get do %>
+                <%= hidden_field_tag :query, "Community" %>
+                  <button class="btn btn-category btn-circle btn-xl" id="Community">
+                    <i class="fa-solid fa-heart-pulse fa-xl"></i>
+                    <br>
+
+              </button>
+              <p class="tags" style="color:black;">Community</p>
+            <% end %>
+
             <%= form_with url: offers_path, method: :get do %>
-            <%= hidden_field_tag :query, "Kids" %>
-              <button class="btn btn-category btn-circle btn-xl" id="Kids">
-                  <i class="fa-solid fa-children fa-xl"></i>
+            <%= hidden_field_tag "all" %>
+              <button class="btn btn-category btn-circle btn-xl" id="all">
+                <i class="fa-solid fa-rectangle-list fa-xl"></i>
                 <br>
               </button>
-              <p class="tags" style="color:black;">Kids</p>
+              <p class="tags" style="color:black;">Reset Filters</p>
             <% end %>
           </div>
-
-            <div class="d-flex">
-              <%= form_with url: offers_path, method: :get do %>
-              <%= hidden_field_tag :query, "Seniors" %>
-                <button class="btn btn-category btn-circle btn-xl" id="Seniors">
-                    <i class="fa-solid fa-person-cane fa-xl"></i>
-                  <br>
-
-            </button>
-            <p class="tags" style="color:black;">Seniors</p>
-          <% end %>
-
-            <div class="d-flex">
-              <%= form_with url: offers_path, method: :get do %>
-              <%= hidden_field_tag :query, "Refugees" %>
-                <button class="btn btn-category btn-circle btn-xl" id="Refugees">
-                  <i class="fa-solid fa-handshake fa-xl"></i>
-                  <br>
-
-            </button>
-            <p class="tags" style="color:black;">Refugees</p>
-          <% end %>
-
-            <div class="d-flex">
-              <%= form_with url: offers_path, method: :get do %>
-              <%= hidden_field_tag :query, "Community" %>
-                <button class="btn btn-category btn-circle btn-xl" id="Community">
-                  <i class="fa-solid fa-heart-pulse fa-xl"></i>
-                  <br>
-
-            </button>
-            <p class="tags" style="color:black;">Community</p>
-          <% end %>
-
-          <%= form_with url: offers_path, method: :get do %>
-          <%= hidden_field_tag "all" %>
-            <button class="btn btn-category btn-circle btn-xl" id="all">
-              <i class="fa-solid fa-rectangle-list fa-xl"></i>
-              <br>
-            </button>
-            <p class="tags" style="color:black;">Reset Filters</p>
-          <% end %>
         </div>
       </div>
-    </div>
   </section>
   <div>
-    <h2>All Wollentier jobs in Berlin</h2>
+    <h2 id="filter-heading">All Wollentier jobs in Berlin</h2>
   </div>
   <br>
 
