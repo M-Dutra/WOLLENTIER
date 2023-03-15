@@ -125,11 +125,13 @@
                 data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
                 data-map-zoom-value=15>
               </div>
-
-
-
             </div>
           </div>
 
         </div>
     </div>
+  <div class="row row-cols-12 row-cols-md-4 g-4">
+    <% @offers.each do |offer| %>
+      <%= render partial: 'offers/card_offer', locals: { offer: offer}  %>
+    <% end %>
+  </div>
