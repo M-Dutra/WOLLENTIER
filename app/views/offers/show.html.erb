@@ -47,10 +47,6 @@
 
 
 
-
-
-
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -70,28 +66,15 @@
 </div>
 
   <!-- further recommendations-->
-  <section class="py-5 bg-light">
-    <div class="container mt-5 fw-bolder g-4">
+  <section class="py-5">
+    <div class="container">
       <h1 class="mx-2">Related Jobs</h1>
-        <% @related_offers.each do |category, offers| %>
-          <div class="card-group">
-            <h3 class="text-center mb-3"><% category %></h3>
-            <% offers.each do |offer| %>
-              <div class="card h-100 card-style mx-2" style="width: 18rem;">
-                <%= link_to offer_path(offer) do %>
-                  <div class="card-body">
-                    <div class="card-badge">
-                      <span><%= offer.category %></span>
-                    </div>
-                    <p class="card-title"><%= offer.title %></p>
-                    <p class="card-title" style=><%= offer.description.slice(0..128) + "..." %></p>
-                    <p class="card-title"><%= offer.district %></p>
-                    <img src="<%= offer.organization.logo_url %>" class="card-offer-logo avatar-bordered" />
-                  </div>
-                <% end %>
-              </div>
-            <% end %>
-        <% end %>
-      </div>
+      <% @related_offers.each do |category, offers| %>
+        <div class="row row-cols-12 row-cols-md-4 g-4">
+          <% offers.each do |offer| %>
+            <%= render partial: 'card_offer', locals: { offer: offer}  %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </section>
