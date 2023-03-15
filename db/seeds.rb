@@ -975,44 +975,48 @@ wv4_offer = Offer.new(
 wv4_offer.save!
 
 eli_application_wv = Application.new(
-  title: "Join World Vision as a Community Development Volunteer",
+  title: "Dedicated Volunteer with a Passion for Making a Difference",
   message: "I am writing to apply for the Community Development Volunteer position at World Vision. As someone who is
   passionate about community development and empowering people, I am excited about the opportunity to work with an
   organization that shares these values.",
+  status: "accepted",
   offer_id: wv_offer.id,
   user_id: eli.id
 )
 eli_application_wv.save!
 
 soline_application_wv = Application.new(
-  title: "Join World Vision as a Community Development Volunteer",
+  title: "Experienced Community Advocate Ready to Give Back",
   message: "As a Community Development Volunteer at World Vision, I would be honored to support your mission of
   improving the lives of vulnerable children and communities around the world. I am committed to working collaboratively
   with community members to identify their needs, strengths, and challenges, and to develop effective strategies to
   address them. I am also passionate about advocating for the rights of children and ensuring that their voices are
   heard.",
+  status: "pending",
   offer_id: wv_offer.id,
   user_id: soline.id
 )
 soline_application_wv.save!
 
 louise_application_wv = Application.new(
-  title: "Join World Vision as a Community Development Volunteer",
+  title: "Committed Volunteer with a Track Record of Impactful Service",
   message: "I am excited to apply for the Community Development Volunteer position at World Vision. With a Bachelor's
   degree in International Development and experience working with diverse communities, I am eager to bring my skills
   and passion to support World Vision's mission of improving the lives of vulnerable children and communities. I have
   experience in community organizing, data analysis, and project management, and I am committed to working with
   community members to build sustainable solutions that address their unique needs.",
   offer_id: wv_offer.id,
+  status: "pending",
   user_id: louise.id
 )
 louise_application_wv.save!
 
 lucas_application_wv = Application.new(
-  title: "Join World Vision as a Community Development Volunteer",
+  title: "Enthusiastic Community Volunteer with a Heart for Service",
   message: "I am thrilled to apply for the Community Development Volunteer role at World Vision. As someone who is
   deeply committed to social justice and empowering underserved communities, I believe that World Vision's focus on
   child protection and community-led development aligns perfectly with my personal and professional values.",
+  status: "pending",
   offer_id: wv_offer.id,
   user_id: lucas.id
 )
@@ -1024,6 +1028,7 @@ taylor_application_wv = Application.new(
   Master's degree in Public Health and experience working in community-based settings, I am excited about the
   opportunity to work with World Vision to improve health outcomes and promote wellbeing among vulnerable populations.",
   offer_id: wv_offer.id,
+  status: "rejected",
   user_id: taylor.id
 )
 taylor_application_wv.save!
@@ -1035,31 +1040,37 @@ katja_application_wv = Application.new(
   positive social impact. I have experience working with underserved communities in both urban and rural settings, a
   nd I am skilled in project management, social media marketing, and community outreach. I am committed to using my
   skills and knowledge to help World Vision achieve its mission of empowering vulnerable children and communities.",
+  status: "accepted",
   offer_id: wv_offer.id,
   user_id: katja.id
 )
 katja_application_wv.save!
 
-olivier_application_wv = Application.new(
-  title: "Dear World Vision Hiring Team",
-  message: "I am writing to apply for the Community Development Volunteer role at World Vision, as I believe that my
-  experience and passion align with your organization's mission to create lasting change in communities worldwide.
-  With a Bachelor's degree in Sociology and experience working in advocacy and grassroots organizing, I am eager to
-  contribute my skills in community engagement, strategic planning, and event coordination to support World Vision's
-  programs.",
-  offer_id: wv_offer.id,
+olivier_application_stc1 = Application.new(
+  title: "Experienced Advocate for Children's Rights",
+  message: "As an experienced advocate for children's rights, I am thrilled to apply for the volunteer position with
+  Save the Children. I have extensive experience working with children and have a deep passion for ensuring that they
+  are safe, healthy, and thriving. I have worked with various organizations over the years, providing support and
+  guidance to children who have experienced trauma, abuse, or neglect. I am confident that my skills, experience, and
+  passion for children's rights make me an ideal candidate for this volunteer position. I am excited about the
+  opportunity to work with Save the Children and contribute to your mission of helping children in need.",
+  status: "pending",
+  offer_id: stc1_offer.id,
   user_id: olivier.id
 )
-olivier_application_wv.save!
+olivier_application_stc1.save!
 
-michael_application_wv = Application.new(
-  title: "Join World Vision as a Community Development Volunteer ",
-  message: "I am committed to working collaboratively with community members to identify and address their needs, and
-  to ensure that their voices are heard.",
-  offer_id: wv_offer.id,
+michael_application_stc1 = Application.new(
+  title: "Compassionate Volunteer with a Heart for Service",
+  message: "I am writing to express my interest in the volunteer position with Save the Children. As a compassionate
+  volunteer with a heart for service, I have always been drawn to organizations that make a difference in the lives of
+  others. I believe that every child deserves a bright future and am committed to doing what I can to support that
+  goal.",
+  status: "pending",
+  offer_id: stc1_offer.id,
   user_id: michael.id
 )
-michael_application_wv.save!
+michael_application_stc1.save!
 
 eli_application_oxfam2 = Application.new(
   title: "Dear Hiring Manager,",
@@ -1068,6 +1079,7 @@ eli_application_oxfam2 = Application.new(
   communities aligns perfectly with my personal and professional values. With a Bachelor's degree in Education and
   experience working with children in both formal and informal settings, I am eager to contribute my skills and
   enthusiasm to support Oxfam's mission.",
+  status: "pending",
   offer_id: oxfam2_offer.id,
   user_id: eli.id
 )
@@ -1080,6 +1092,7 @@ eli_application_brac1 = Application.new(
   marginalized communities aligns perfectly with my personal and professional values. With a Master's degree in
   International Development and experience working with refugees in both urban and rural settings, I am eager to
   contribute my skills and expertise to support BRAC's mission.",
+  status: "pending",
   offer_id: brac1_offer.id,
   user_id: eli.id
 )
@@ -1091,6 +1104,7 @@ eli_application_irc1 = Application.new(
   International Rescue Committee (IRC). With a Master's degree in International Human Rights Law and experience working
   with refugees in both the Middle East and Africa, I am eager to contribute my skills and expertise to support IRC's
   mission of providing lifesaving assistance to refugees and other vulnerable populations.",
+  status: "pending",
   offer_id: irc1_offer.id,
   user_id: eli.id
 )
