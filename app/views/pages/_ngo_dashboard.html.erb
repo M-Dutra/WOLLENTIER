@@ -35,26 +35,17 @@
 
 <% @applications.each do |application| %>
   <div class="application-container d-flex align-items-center justify-content-between">
-    <img class="avatar-large" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2960&q=80">
-    <h5 class="card-title"><%= application.title %></h5>
+    <div class="d-flex align-items-center ms-3">
+      <img class="avatar-large" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2960&q=80">
+      <h5 class="card-title ms-4"><%= application.title %></h5>
+    </div>
+    <p class="district-style"><%= (application.created_at).strftime("%A, %d %b %Y %l:%M %p") %></p>
     <p class="application-tag-user application-tag-<%= application.status.nil? ? "pending": application.status.downcase %>"><%= application.status.nil? ? "Pending": application.status.downcase  %></p>
     <div class="application-actions d-flex align-items-center">
-      <% if application.pending? %>
-        <div >
-          <%= simple_form_for application do |f| %>
-            <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-            <%= f.submit 'Accept', class: 'btn btn-primary' %>
-          <% end %>
-        </div>
-        <div>
-          <%= simple_form_for application do |f| %>
-            <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
-            <%= f.submit 'Reject', class: 'btn btn-secondary' %>
-          <% end %>
-        </div>
-      <% else %>
-        <p class='application-tag'><%= application.status %></p>
-      <% end %>
+    <button type="button" class="btn btn-secondary me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Details
+    </button>
+    <p class='application-tag'><%= application.status %></p>
     </div>
   </div>
 <% end %>
