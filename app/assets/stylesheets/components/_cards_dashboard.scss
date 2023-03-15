@@ -27,7 +27,8 @@
 
 }
 .card {
-  border: 1px #ffffff solid
+  border: 1px #ffffff solid;
+  border-radius: 4px;
 }
 
 .card-title {
@@ -51,6 +52,7 @@
   position: relative;
   box-sizing: border-box;
   height: 300px;
+
 }
 
 .card-body-show-org {
@@ -210,4 +212,10 @@
 .district-style {
   font-size: 14px !important;
   color: #839faf !important;
+}
+
+.application-time {
+  font-size: 14px !important;
+  color: #839faf !important;
+  margin: 0 !important;
 }

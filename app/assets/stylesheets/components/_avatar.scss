@@ -4,8 +4,12 @@
 }
 .avatar-large {
   width: 56px;
+  height: 56px;
   border-radius: 50%;
+  background-size: cover;
+  background-position: center;
 }
+
 .avatar-bordered {
   width: 70px;
 }
