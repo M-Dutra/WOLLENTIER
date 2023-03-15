@@ -33,6 +33,19 @@ border: none;
   margin-left: 16px;
   }
 
+  .btn.btn-secondary {
+    background-color: #d2e0e8;
+    border: none;
+    color: #119fee;
+    font-weight: 600;
+    font-family: $headers-font;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 8px 16px 7px 16px;
+    border-radius: 4px;
+    margin-left: 16px;
+    }
+
   .btn.btn-primary-mdutra {
     background-color: #119fee;
     border: none;
@@ -67,5 +80,3 @@ border: none;
 .i {
   font-size: 20px;
 }
-
-

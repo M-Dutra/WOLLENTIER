@@ -27,7 +27,8 @@
 
 }
 .card {
-  border: 1px #ffffff solid
+  border: 1px #ffffff solid;
+  border-radius: 4px;
 }
 
 .card-title {
@@ -51,6 +52,7 @@
   position: relative;
   box-sizing: border-box;
   height: 300px;
+
 }
 
 .card-body p {
