@@ -1,88 +1,52 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.umweltfestival.de/wp-content/uploads/2020/08/Berlin_GP-Logo_gruen-weiss_30cm-scaled.jpg);">
+<div class="banner-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.umweltfestival.de/wp-content/uploads/2020/08/Berlin_GP-Logo_gruen-weiss_30cm-scaled.jpg);">
   <div class="container">
     <h1>Greenpeace</h1>
   </div>
 </div>
 
-<div class="container">
-  <div class="d-flex align-items-start">
-    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Home</button>
-      <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</button>>
-      <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</button>
-      <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</button>
-    </div>
-    <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">...</div>
-      <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">...</div>
-      <div class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">...</div>
-      <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">...</div>
-      <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">...</div>
-    </div>
-  </div>
-
+<div class="sub-nav">
+  <ul class="d-flex flex-row justify-content-start container align-items-center">
+    <li class="nav-link mt-3 me-5"><p>Open jobs</p></li>
+    <li class="nav-link mt-3 me-5"><p>Applications</p></li>
+    <li class="nav-link mt-3"><p>Volunteers</p></li>
+  </ul>
 </div>
 
-<div class="container">
-  <h1>Applications for my job offers</h1>
-
-
-
-
-
-  <div class="applications">
-    <% @applications.each do |application| %>
-      <div class="card">
-        <img src="https://source.unsplash.com/random/?volunteer" alt="Random image">
-        <div class="card-body">
-          <h5 class="card-title"><%= application.title %></h5>
-          <div class="application-actions">
-            <% if application.pending? %>
-              <%= simple_form_for application do |f| %>
-                <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
-                <%= f.submit 'Accept', class: 'btn btn-info' %>
-              <% end %>
-              <%= simple_form_for application do |f| %>
-                <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
-                <%= f.submit 'Reject', class: 'btn btn-light' %>
-              <% end %>
-            <% else %>
-              <p class='application-tag'><%= application.status %></p>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<%# <div class="container">
-  <div class="row">
-    <div class="d-flex justify-content-between  mt-4 mb-4">
-      <h2 class= "m-0">My Offers</h2>
-      <%= link_to "Add offer", new_offer_path, class:"btn btn-primary" %>
+<div class="dash-content container">
+  <div class="open-jobs-container">
+    <div class="d-flex justify-content-between pt-3">
+      <div><h3>Open jobs</h3></div>
+      <div><%= link_to "Add offer", new_offer_path, class:"btn btn-primary" %></div>
     </div>
-  </div>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-12 row-cols-md-4 g-4 pt-3">
       <% @offers.each do |offer| %>
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="card-group">
-          <div class="card h-100 card-style">
-            <div class="application">
-              <img src="https://source.unsplash.com/random/" class="img-thumbnail" alt="...">
-            </div>
-            <%= link_to offer_path(offer) do %>
-              <div class="card-body">
-                <h6 class="card-subtitle "><%= offer.category %></h6>
-                <p class="card-title"><%= offer.title %></p>
-                <div class="price-label text-center align-middle">
-                <h3 class="card-price"><%= offer.start_date %></h3>
-                </div>
+      <div class="card-group">
+        <div class="card h-100 card-style" style="width: 18rem;">
+          <%= link_to offer_path(offer) do %>
+            <div class="card-body">
+              <div class="card-badge">
+                <span><%= offer.category %></span>
               </div>
-            <% end %>
-          </div>
+              <p class="card-title"><strong><%= offer.title %></strong></p>
+              <p class="card-district"><%= offer.district %></p>
+              <img src="<%= offer.organization.logo_url %>" class="card-offer-logo avatar-bordered" />
+            </div>
+          <% end %>
         </div>
       </div>
       <% end %>
+    </div>
+
+    <div class="applications-container">
+      <div>
+        
+      </div>
+
+
+    </div>
+
+    <div class="volunteers-container">
+    </div>
+
   </div>
-</div> %>
+</div>

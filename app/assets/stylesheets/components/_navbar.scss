@@ -19,10 +19,30 @@
 }
 
 .nav-link {
+  color: $w-blue;
+  font-weight: 600;
+  font-family: $headers-font;
+
+
+  &:hover {
+    text-decoration:underline;
+    color: $w-dblue;
+    cursor: pointer;
+    // text-decoration: underline;
+  }
+
+  // &:active {
+  //   background-color: $w-blue;
+  //   padding: 4px;
+  // }
+}
+
+.main-nav-link {
   color: rgba(255, 255, 255, 0.8);
   font-weight: 600;
   font-family: $headers-font;
   margin-left: 20px;
+  text-decoration: none;
 
   &:hover {
     color: #ffffff;
