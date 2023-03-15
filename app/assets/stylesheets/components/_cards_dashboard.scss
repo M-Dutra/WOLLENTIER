@@ -50,12 +50,12 @@
 .card-body {
   position: relative;
   box-sizing: border-box;
-  height: 400px;
+  height: 300px;
 }
 
 .card-body p {
   font-size: 18px;
-  padding: 10px 20px;
+  padding: 5px 10px;
   // font-size: larger;
   color:#000000
 }
@@ -68,8 +68,8 @@
 
 .card-body .card-offer-logo {
   position: absolute;
-  right: 16px;
-  top: 6px;
+  right: 24px;
+  top: 14px;
   // width: 40px;
 }
 
@@ -192,4 +192,14 @@
 .h2 {
   margin: 5px;
   padding: 5px;
+}
+
+.card-district {
+  font-size: 12px;
+  color: #a1b5c1;
+}
+
+.district-style {
+  font-size: 14px !important;
+  color: #839faf !important;
 }
