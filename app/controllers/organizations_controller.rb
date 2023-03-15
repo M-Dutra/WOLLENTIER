@@ -16,6 +16,7 @@ class OrganizationsController < ApplicationController
 
   def show
     @organization = Organization.find(params[:id])
+    @offers = @organization.offers
     authorize @organization
     @markers = [{
       lat: @organization.latitude,
