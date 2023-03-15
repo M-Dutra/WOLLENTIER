@@ -24,15 +24,43 @@
       <% end %>
     </div>
 
-    <div class="applications-container">
-      <% @applications.each do |application| %>
-        <div class="application-container d-flex d-flex align-items-center justify-content-around">
-          <img class="avatar" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2960&q=80">
-          <p class="name"><% application %> </p>
-          <p> <%= application.title %> </p>
-          <p class="application-tag-user application-tag-<%= application.status.nil? ? "pending": application.status.downcase %>"><%= application.status.nil? ? "Pending": application.status.downcase  %></p>
+    <%# <div class="applications-container">
+      <div class="container"> %>
+  <h1>Applications for my job offers</h1>
+
+
+
+
+
+  <div class="applications">
+    <% @applications.each do |application| %>
+      <div class="card">
+        <img src="https://source.unsplash.com/random/?volunteer" alt="Random image">
+        <div class="card-body">
+          <h5 class="card-title"><%= application.title %></h5>
+          <div class="application-actions">
+            <% if application.pending? %>
+              <%= simple_form_for application do |f| %>
+                <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
+                <%= f.submit 'Accept', class: 'btn btn-info' %>
+              <% end %>
+              <%= simple_form_for application do |f| %>
+                <%= f.input :status, as: :hidden, input_html: { value: 'rejected'} %>
+                <%= f.submit 'Reject', class: 'btn btn-light' %>
+              <% end %>
+            <% else %>
+              <p class='application-tag'><%= application.status %></p>
+            <% end %>
+          </div>
         </div>
-      <% end %>
+      </div>
+    <% end %>
+  </div>
+<%# </div>
+
+
+
+
 
 
     </div>
@@ -41,4 +69,4 @@
     </div>
 
   </div>
-</div>
+</div> %>
