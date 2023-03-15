@@ -50,12 +50,12 @@
 .card-body {
   position: relative;
   box-sizing: border-box;
-  height: 400px;
+  height: 300px;
 }
 
 .card-body p {
   font-size: 18px;
-  padding: 10px 20px;
+  padding: 5px 10px;
   // font-size: larger;
   color:#000000
 }
@@ -68,8 +68,8 @@
 
 .card-body .card-offer-logo {
   position: absolute;
-  right: 16px;
-  top: 6px;
+  right: 24px;
+  top: 14px;
   // width: 40px;
 }
 
@@ -80,10 +80,21 @@
   width: 65px;
 }
 
+.card-offer-logo-show-banner {
+  position: absolute;
+  right: 304px;
+  top: 260px;
+  width: 200px;
+  height: 140px;
+  background-color: white;
+  object-fit: contain;
+
+}
+
 .card-badge {
-  background-color: $w-blue;
+  background-color: #d7f1ff;
   border-radius: 0  150px 150px 0;
-  color: white;
+  color: #119fee;
   font-weight: bold;
   margin-left: -1rem;
   width:65%;
@@ -96,9 +107,9 @@
 }
 
 .card-badge-mdutra {
-  background-color: $w-blue;
+  background-color: #d7f1ff;
   border-radius: 0  150px 150px 0;
-  color: white;
+  color: #119fee;
   font-weight: bold;
   margin-left: 0px;
   width: 20%;
@@ -181,4 +192,14 @@
 .h2 {
   margin: 5px;
   padding: 5px;
+}
+
+.card-district {
+  font-size: 12px;
+  color: #a1b5c1;
+}
+
+.district-style {
+  font-size: 14px !important;
+  color: #839faf !important;
 }

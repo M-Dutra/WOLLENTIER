@@ -1,50 +1,52 @@
-<%= render "shared/banner" %>
-<div class="container">
-  <div class="row">
-    <%# title and description %>
-      <div class="col-8">
-        <h1><%= @offer.title %></h1>
-        <h6 class="card-badge-mdutra"><%= @offer.category %></h4>
-        <p><%= @offer.description %></p>
-        <!-- Button trigger modal -->
-        <% if user_signed_in? && current_user.volunteer? %>
-        <button type="button" class="btn btn-primary-mdutra mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          Apply for Job
-        </button>
-        <% end %>
-        <div class="d-flex flex-row mb-3 justify-content-start">
-          <!-- PUNDIT - PLEASE ADD THE BUTTONS BELOW TO THEIR RELATED DIV-->
-          <% if policy(@offer).edit? %>
-            <%= link_to "Edit this offer", edit_offer_path(@offer), class: "btn btn-primary-mdutra" %>
+<div class="banner position-relative" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://content.magnumphotos.com/wp-content/uploads/2016/05/cortex/nyc94317-photographer-featured.jpg);">
+  <img class="position-absolute card-offer-logo-show-banner" src="<%= @offer.organization.logo_url %>" />
+</div>
+<div class="job-detail-container">
+  <div class="container">
+    <div class="row">
+      <%# title and description %>
+        <div class="col-8">
+          <h1><%= @offer.title %></h1>
+          <h6 class="card-badge-mdutra"><%= @offer.category %></h4>
+          <p class="job-description"><%= @offer.description %></p>
+          <!-- Button trigger modal -->
+          <% if user_signed_in? && current_user.volunteer? %>
+          <button type="button" class="btn btn-primary-mdutra mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Apply for Job
+          </button>
           <% end %>
-          <%= button_to "Delete this offer", @offer, method: :delete, class: "btn btn-primary" if policy(@offer).destroy? %>
-        </div>
-
-
-      </div>
-      <div class="col-4">
-        <div class="d-flex flex-column mb-5">
-          <div class="p-2 position-relative">
-            <img class="position-absolute top-0 end-0 card-offer-logo-show" src="<%= @offer.organization.logo_url %>" />
-            <h3><strong><%= @offer.organization.name %></strong></h3>
-            <p>District: <%= @offer.district %></p>
-            <p>Phone Number: <%= @offer.organization.user.phone_number %></p>
-            <p>Email: <%= @offer.organization.user.email %></p>
+          <div class="d-flex flex-row mb-3 justify-content-start">
+            <!-- PUNDIT - PLEASE ADD THE BUTTONS BELOW TO THEIR RELATED DIV-->
+            <% if policy(@offer).edit? %>
+              <%= link_to "Edit this offer", edit_offer_path(@offer), class: "btn btn-primary-mdutra" %>
+            <% end %>
+            <%= button_to "Delete this offer", @offer, method: :delete, class: "btn btn-primary" if policy(@offer).destroy? %>
           </div>
-          <div class="p-2">
-            <div class="row gutters-sm" id="map"
-                style="width: 100%; height: 300px;"
-                data-controller="map"
-                data-map-markers-value="<%= @markers.to_json %>"
-                data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
-                data-map-zoom-value=15>
+
+
+        </div>
+        <div class="col-4">
+          <div class="d-flex flex-column mb-5">
+            <div class="p-2 position-relative">
+              <h3><strong><%= @offer.organization.name %></strong></h3>
+              <p>District: <%= @offer.district %></p>
+              <p>Phone Number: <%= @offer.organization.user.phone_number %></p>
+              <p>Email: <%= @offer.organization.user.email %></p>
+            </div>
+            <div class="p-2">
+              <div class="row gutters-sm" id="map"
+                  style="width: 100%; height: 300px;"
+                  data-controller="map"
+                  data-map-markers-value="<%= @markers.to_json %>"
+                  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
+                  data-map-zoom-value=15>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+    </div>
   </div>
 </div>
-
 
 
 <!-- Modal -->
