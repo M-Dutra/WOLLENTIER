@@ -12,10 +12,9 @@
       </div>
         <%# <form class="d-flex" role="links"> %>
             <ul class="navbar-nav d-flex align-items-center">
-
                 <% if user_signed_in? %>
-                  <li class="nav item dropdown">
-                    <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2960&q=80" />
+                  <li class="nav item dropdown" style="position: initial !important;">
+                    <img class="avatar dropdown-toggle" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-image: url(<%= current_user.profile_url %>)" />
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                       <li><%= link_to "Profile", edit_user_registration_path, method: :get, class: "dropdown-item" %></li>
                       <li><%= link_to "Dashboard", dashboard_path, method: :get, class: "dropdown-item" %></li>

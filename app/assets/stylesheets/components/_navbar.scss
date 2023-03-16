@@ -18,6 +18,12 @@
   width: 100%;
 }
 
+.dropdown-menu {
+  right: 3px !important;
+  top: 75px !important;
+  left: unset !important;
+}
+
 .nav-link {
   color: $w-blue;
   font-weight: 600;
