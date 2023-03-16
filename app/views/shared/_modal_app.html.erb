@@ -23,6 +23,8 @@
               <%= f.submit 'Reject', class: 'btn btn-secondary' %>
             <% end %>
           </div>
+        <% elsif application.status.nil? %>
+          <p class='application-tag'>pending</p>
         <% else %>
           <p class='application-tag'><%= application.status %></p>
         <% end %>
