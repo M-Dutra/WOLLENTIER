@@ -1,27 +1,50 @@
-<div class="container">
-  <h1>Applications</h1>
-  <div class="container d-flex">
-<% @applications.each do |application| %>
-  <div class="card-group">
-  <div class="card h-100 card-style" style="width: 18rem;">
-    <div class="card-body">
-      <div class="card-badge">
-        <span><%= application.offer.category %></span>
-      </div>
-      <p class="card-title"><strong><%= application.title %></strong></p>
-      <p class="card-frequency"><%= application.message.slice(0..70) %></p>
-      <img src="<%= application.offer.organization.logo_url %>" class="card-offer-logo avatar-bordered" />
-    </div>
+
+<div class="banner-dashboard" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.umweltfestival.de/wp-content/uploads/2020/08/Berlin_GP-Logo_gruen-weiss_30cm-scaled.jpg);">
+  <div class="container">
+    <h1><%= current_user.first_name%> <%= current_user.last_name%></h1>
   </div>
-<% end %>
 </div>
 
-<%# <% current_user.applications.each do |application| %>
-    <%# <div class="card border-dark mb-3" style="max-width: 18rem;">
-      <div class="card-header"> Header</div>
-      <div class="card-body text-dark">
-        <h5 class="card-title"><% application.title %></h5>
-        <%# <p class="card-text"><% application.description %></p>
-      <%# </div>
-    </div> %>
+<div data-controller="dashboard-volunteer">
+  <div class="sub-nav">
+    <ul class="d-flex flex-row justify-content-start container align-items-center" data-action="click->dashboard-volunteer#display">
+      <li class="nav-link mt-3 me-5"><p>Applications</p></li>
+      <li class="nav-link mt-3"><p>Organizations</p></li>
+    </ul>
+  </div>
 
+  <div class="dash-content container">
+
+    <div class="applications-container" data-dashboard-volunteer-target="applications">
+      <h3 class="mt-4">Applications for my job offers</h3>
+      <% @applications.each do |application| %>
+        <div class="application-container d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center ms-3">
+            <div class="avatar-large" style="background-image: url(<%= application.user.profile_url %>)">
+            </div>
+            <h5 class="card-title ms-4"><%= application.title %></h5>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="application-time me-5"><%= (application.created_at).strftime("%A, %d %b %Y %l:%M %p") %></p>
+            <div class="application-actions d-flex align-items-center">
+            <p class="application-tag-user application-tag-<%= application.status.nil? ? "pending": application.status.downcase %>"><%= application.status.nil? ? "Pending": application.status.downcase  %></p>
+            <button type="button" class="btn btn-secondary me-4" data-bs-toggle="modal" data-bs-target="#modal-<%= application.id %>">
+              Details
+            </button>
+          </div>
+          </div>
+        </div>
+      <%= render "shared/modal_app", application: application, applicant: application.id %>
+      <% end %>
+    </div>
+
+    <div class="volunteers-container" data-dashboard-volunteer-target="organizations">
+      <h3 class="mt-4 mb-2">Your organizations</h3>
+      <div class="row row-cols-12 row-cols-md-4 g-4 pt-3">
+        <% @hired_organizations.each do |accepted_application| %>
+          <%= render partial: 'shared/card_organization', locals: { organization: accepted_application.offer.organization}  %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

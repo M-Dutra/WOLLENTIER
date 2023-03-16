@@ -101,7 +101,7 @@ besher.save!
 eli = User.new(
   first_name: "Elisabeth",
   last_name: "Messmer",
-  email: "eli@volunteer.com",
+  email: "eli@gmail.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
   interests: ["Sports"],
@@ -113,7 +113,7 @@ eli.save!
 lucas = User.new(
   first_name: "Lucas",
   last_name: "Grüner",
-  email: "lucas@volunteer.com",
+  email: "lucas@gmail.com",
   password: "123456",
   phone_number: "+49 30 389 613 211",
   interests: ["Highlights"],
@@ -125,7 +125,7 @@ lucas.save!
 louise = User.new(
   first_name: "Louise",
   last_name: "Wedel",
-  email: "louise@volunteer.com",
+  email: "louise@gmail.com",
   password: "123456",
   phone_number: "+49 30 687 324 980",
   interests: ["Music"],
@@ -137,7 +137,7 @@ louise.save!
 soline = User.new(
   first_name: "Soline",
   last_name: "Dziadzio",
-  email: "soline@volunteer.com",
+  email: "soline@gmail.com",
   password: "123456",
   phone_number: "+49 30 737 860 946",
   interests: ["Advocacy"],
@@ -149,7 +149,7 @@ soline.save!
 katja = User.new(
   first_name: "Katja",
   last_name: "Löffler",
-  email: "katja@volunteer.com",
+  email: "katja@gmail.com",
   password: "123456",
   phone_number: "+49 30 738 769 431",
   interests: ["Human Rights"],
@@ -161,7 +161,7 @@ katja.save!
 olivier = User.new(
   first_name: "Olivier",
   last_name: "Girardot",
-  email: "olivier@volunteer.com",
+  email: "olivier@gmail.com",
   password: "123456",
   phone_number: "+49 30 607 269 357",
   interests: ["Community"],
@@ -173,7 +173,7 @@ olivier.save!
 lauren = User.new(
   first_name: "Lauren",
   last_name: "Hunter",
-  email: "lauren@volunteer.com",
+  email: "lauren@gmail.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
   interests: ["Refugees"],
@@ -185,7 +185,7 @@ lauren.save!
 alberto = User.new(
   first_name: "Alberto",
   last_name: "Junior",
-  email: "alberto@volunteer.com",
+  email: "alberto@gmail.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
   interests: ["Seniors"],
@@ -197,7 +197,7 @@ alberto.save!
 pedro = User.new(
   first_name: "Pedro",
   last_name: "Miranda",
-  email: "pedro@volunteer.com",
+  email: "pedro@gmail.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
   interests: ["Kids"],
@@ -209,7 +209,7 @@ pedro.save!
 ronaldinho = User.new(
   first_name: "Ronaldinho",
   last_name: "Gaucho",
-  email: "ronaldinho@volunteer.com",
+  email: "ronaldinho@gmail.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
   interests: ["Sports"],
@@ -221,7 +221,7 @@ ronaldinho.save!
 michael = User.new(
   first_name: "Michael",
   last_name: "Jacson",
-  email: "michael@volunteer.com",
+  email: "michael@gmail.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
   interests: ["Music"],
@@ -233,7 +233,7 @@ michael.save!
 taylor = User.new(
   first_name: "Taylor",
   last_name: "Swift",
-  email: "taylor@volunteer.com",
+  email: "taylor@gmail.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
   interests: ["Community"],
