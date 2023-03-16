@@ -11,6 +11,7 @@
 
   background-color: white;
   opacity: 1;
+  cursor: default;
 
   &::placeholder {
     color: #bac9d2;
@@ -25,5 +26,3 @@ body {
   line-height: 26px;
   width: 750px;
 }
-
-
