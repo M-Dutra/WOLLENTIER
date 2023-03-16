@@ -55,6 +55,13 @@
 
 }
 
+.card-body-organizations {
+  position: relative;
+  box-sizing: border-box;
+  // height: 200px;
+
+}
+
 .card-body-show-org {
   position: relative;
   box-sizing: border-box;
@@ -82,6 +89,13 @@
   top: 235px;
   width: 72px;
   height: 59px;
+  background-color: white;
+  object-fit: contain
+}
+
+.card-organization-logo {
+  width: 174px;
+  height: 121px;
   background-color: white;
   object-fit: contain
 }
