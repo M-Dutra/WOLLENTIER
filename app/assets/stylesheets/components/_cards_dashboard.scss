@@ -131,6 +131,20 @@
   font-size-adjust:0.5;
 }
 
+
+.volunteer-interests-badge {
+  padding: 4px 8px 0px 8px;
+  border-radius: 16px;
+  font-weight: 800;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: $headers-font;
+  margin: 20px 20px;
+  padding-bottom: 1px;
+  background-color: #d7f1ff;
+  color: #119fee;
+}
+
 .card-badge-community {
   background-color: #d7f1ff;
   border-radius: 0  150px 150px 0;
@@ -272,7 +286,7 @@
 .card-body-volunteer {
   position: relative;
   box-sizing: border-box;
-  height: 300px;
+  height: 325px;
 }
 
 

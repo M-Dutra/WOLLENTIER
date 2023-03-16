@@ -14,7 +14,7 @@ toni = User.new(
   email: "toni@org.com",
   password: "123456",
   phone_number: "+4915503173420",
-  interests: "Kids",
+  interests: ["Kids"],
   role: "organization",
   profile_url: "https://media.istockphoto.com/id/1352463046/de/foto/headshot-einer-selbstbewussten-reifen-geschäftsfrau.jpg?s=612x612&w=0&k=20&c=hldGrb8P-DsmCGlIpeFAWNuXchOGTMfppUJmRZRJHS4="
 )
@@ -26,7 +26,7 @@ alexander = User.new(
   email: "alex@org.com",
   password: "123456",
   phone_number: "+49 155 615 561 57",
-  interests: "Community",
+  interests: ["Community"],
   role: "organization"
 )
 alexander.save!
@@ -37,7 +37,7 @@ jonas = User.new(
   email: "jonas@org.com",
   password: "123456",
   phone_number: "+49 177 355 564 16",
-  interests: "Community",
+  interests: ["Community"],
   role: "organization"
 )
 jonas.save!
@@ -48,7 +48,7 @@ manuel = User.new(
   email: "manuel@org.com",
   password: "123456",
   phone_number: "+49 30 089 613 211",
-  interests: "Refugees",
+  interests: ["Refugees"],
   role: "organization"
 )
 manuel.save!
@@ -59,7 +59,7 @@ tulio = User.new(
   email: "tulio@org.com",
   password: "123456",
   phone_number: "+49 30 187 324 980",
-  interests: "Community",
+  interests: ["Community"],
   role: "organization",
   profile_url: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
 )
@@ -71,7 +71,7 @@ leo = User.new(
   email: "leo@org.com",
   password: "123456",
   phone_number: "+49 30 737 860 946",
-  interests: "Refugees",
+  interests: ["Refugees"],
   role: "organization"
 )
 leo.save!
@@ -82,7 +82,7 @@ florian = User.new(
   email: "florian@org.com",
   password: "123456",
   phone_number: "+49 30 738 769 431",
-  interests: "Community",
+  interests: ["Community"],
   role: "organization"
 )
 florian.save!
@@ -93,7 +93,7 @@ besher = User.new(
   email: "besher@org.com",
   password: "123456",
   phone_number: "+49 30 607 269 357",
-  interests: "Seniors",
+  interests: ["Seniors"],
   role: "organization"
 )
 besher.save!
@@ -104,7 +104,7 @@ eli = User.new(
   email: "eli@volunteer.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
-  interests: "Sports",
+  interests: ["Sports"],
   role: "volunteer",
   profile_url: "https://media.istockphoto.com/id/1399788030/pt/foto/portrait-of-young-confident-indian-woman-pose-on-background.jpg?b=1&s=170667a&w=0&k=20&c=sCGVbWqQHgvH839EqFnJxKsXwRX1FzYFi2qxxmBWxGM="
 )
@@ -116,7 +116,7 @@ lucas = User.new(
   email: "lucas@volunteer.com",
   password: "123456",
   phone_number: "+49 30 389 613 211",
-  interests: "Highlights",
+  interests: ["Highlights"],
   role: "volunteer",
   profile_url: "https://media.istockphoto.com/id/1388253782/pt/foto/positive-successful-millennial-business-professional-man-head-shot-portrait.jpg?b=1&s=170667a&w=0&k=20&c=JXYxqMm0ZTdc3sdZ2MLQhDnwU0IXqUFwNH4C2Iv3MlE="
 )
@@ -128,7 +128,7 @@ louise = User.new(
   email: "louise@volunteer.com",
   password: "123456",
   phone_number: "+49 30 687 324 980",
-  interests: "Music",
+  interests: ["Music"],
   role: "volunteer",
   profile_url: "https://media.istockphoto.com/id/1407759041/pt/foto/confident-happy-beautiful-hispanic-student-girl-indoor-head-shot-portrait.jpg?b=1&s=170667a&w=0&k=20&c=rQ7clIRvX6gzldKrvh1PhhemN7X4YRHmM8alK6RqzzM="
 )
@@ -140,7 +140,7 @@ soline = User.new(
   email: "soline@volunteer.com",
   password: "123456",
   phone_number: "+49 30 737 860 946",
-  interests: "Advocacy",
+  interests: ["Advocacy"],
   role: "volunteer",
   profile_url: "https://media.istockphoto.com/id/1311084168/de/foto/überglückliche-hübsche-asiatische-frau-schauen-in-die-kamera-mit-aufrichtigem-lachen.jpg?s=612x612&w=0&k=20&c=T4fIt4-BxMgvyoVEXuFC5KolixxFL-BtB-lC9RWg_ho="
 )
@@ -152,7 +152,7 @@ katja = User.new(
   email: "katja@volunteer.com",
   password: "123456",
   phone_number: "+49 30 738 769 431",
-  interests: "Human Rights",
+  interests: ["Human Rights"],
   role: "volunteer",
   profile_url: "https://media.istockphoto.com/id/1329936184/de/foto/kopfschuss-porträt-einer-lächelnden-geschäftsfrau-die-in-die-kamera-schaut.jpg?s=612x612&w=0&k=20&c=15DzZOFJNj3F8AdSSVtyW8SSzJmFL_yOJMXjsK8eh3g="
 )
@@ -164,7 +164,7 @@ olivier = User.new(
   email: "olivier@volunteer.com",
   password: "123456",
   phone_number: "+49 30 607 269 357",
-  interests: "Community",
+  interests: ["Community"],
   role: "volunteer",
   profile_url: "https://media.istockphoto.com/id/1309328823/de/foto/headshot-porträt-von-lächelnden-männlichen-angestellten-im-büro.jpg?s=612x612&w=0&k=20&c=7T8_yMp5luC4WlMki87U2lCrlVlGXZBtL8Hn3Av5LKk="
 )
@@ -176,7 +176,7 @@ lauren = User.new(
   email: "lauren@volunteer.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
-  interests: "Refugees",
+  interests: ["Refugees"],
   role: "volunteer",
   profile_url: "https://media.istockphoto.com/id/1318482009/de/foto/junge-frau-bereit-für-den-job-geschäftskonzept.jpg?s=612x612&w=0&k=20&c=O3bhsOPXofWOvWoxYtG02XlZvdo0ytS7Pn0PK-aLsjc="
 )
@@ -188,7 +188,7 @@ alberto = User.new(
   email: "alberto@volunteer.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
-  interests: "Seniors",
+  interests: ["Seniors"],
   role: "volunteer",
   profile_url: "https://media.istockphoto.com/id/544979402/de/foto/porträt-eines-schweren-jungen-mannes.jpg?s=612x612&w=0&k=20&c=kPsNnvyEkr5cgNDXMAvgHjlbFsMFnMm_Xx20sbqr0is="
 )
@@ -200,7 +200,7 @@ pedro = User.new(
   email: "pedro@volunteer.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
-  interests: "Kids",
+  interests: ["Kids"],
   role: "volunteer",
   profile_url: "https://media.istockphoto.com/id/1338134336/pt/foto/headshot-portrait-african-30s-man-smile-look-at-camera.jpg?b=1&s=170667a&w=0&k=20&c=SFQyWuhNqsI4YypI1rQEwV3yv9RMzkHoXaHrz_Jkft8="
 )
@@ -212,7 +212,7 @@ ronaldinho = User.new(
   email: "ronaldinho@volunteer.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
-  interests: "Sports",
+  interests: ["Sports"],
   role: "volunteer",
   profile_url: "https://media.istockphoto.com/id/1390042774/de/foto/porträt-eines-lächelnden-eleganten-geschäftsmannes-der-in-die-kamera-schaut.jpg?s=612x612&w=0&k=20&c=bq2ECg2Z1DEmTPFSzGdYxZed91YZqC8SihdXQRDHmzg="
 )
@@ -224,7 +224,7 @@ michael = User.new(
   email: "michael@volunteer.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
-  interests: "Music",
+  interests: ["Music"],
   role: "volunteer",
   profile_url: "https://media.istockphoto.com/id/1320207978/de/foto/kopfschuss-lächelnd-geschäftsmann-trägt-brille-im-büro-stehend.jpg?s=612x612&w=0&k=20&c=pxfD6oW-ApaSzCKRj4tjl_JFrtNPS6mRpdeBpbQe_T8="
 )
@@ -236,7 +236,7 @@ taylor = User.new(
   email: "taylor@volunteer.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
-  interests: "Community",
+  interests: ["Community"],
   role: "volunteer",
   profile_url: "https://media.istockphoto.com/id/1437816897/pt/foto/business-woman-manager-or-human-resources-portrait-for-career-success-company-we-are-hiring-or.jpg?b=1&s=170667a&w=0&k=20&c=cpeePSCsbsTQNZkyw31mcmgudO69CPELyCWoEAfKUsI="
 )
