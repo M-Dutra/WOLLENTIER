@@ -7,7 +7,7 @@
       <%# title and description %>
         <div class="col-8">
           <h1><%= @offer.title %></h1>
-          <h6 class="card-badge-mdutra"><%= @offer.category %></h4>
+          <div class="card-badge card-badge-<%= @offer.category.downcase %>"><span><%= @offer.category %></span></div>
           <p class="job-description"><%= @offer.description %></p>
           <!-- Button trigger modal -->
           <% if user_signed_in? && current_user.volunteer? %>
