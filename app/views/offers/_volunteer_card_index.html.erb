@@ -1,4 +1,4 @@
-<div class="card-group pb-4">
+<div class="card-group pb-2">
   <div class="card h-100 card-style " style="width: 18rem;">
       <div class="card-body-volunteer">
         <div class="d-flex flex-column align-items-center">
@@ -8,10 +8,12 @@
             <div>
               <p class="district-style">Phone</p>
               <p class="district-style"  style="margin-top: -10px">E-Mail</p>
+              <p class="district-style"  style="margin-top: -10px">Interests</p>
             </div>
             <div>
               <p class="card-district contact-details"><%= user.phone_number %></p>
               <p class="card-district contact-details"  style="margin-top: -10px"><%= user.email %></p>
+              <p class="card-district volunteer-interests-badge"  style="margin-top: -10px"><%= user.interests.first %></p>
             </div>
           </div>
       </div>

@@ -26,3 +26,11 @@ body {
   line-height: 26px;
   width: 750px;
 }
+
+.organization-logo-show {
+  width: 250px;
+  height: 200px;
+  // background-size: cover;
+  // background-position: center;
+  object-fit: contain;
+}
