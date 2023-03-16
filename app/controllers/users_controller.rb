@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
     @users = policy_scope(User)
+    @volunteers = @users.where(role: "volunteer")
   end
 
   def edit

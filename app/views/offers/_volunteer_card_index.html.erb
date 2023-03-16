@@ -1,0 +1,20 @@
+<div class="card-group pb-4">
+  <div class="card h-100 card-style " style="width: 18rem;">
+      <div class="card-body-volunteer">
+        <div class="d-flex flex-column align-items-center">
+          <div class="avatar-xlarge" style="background-image: url(<%= user.profile_url %>)"></div>
+          <p class="card-title mt-4"><strong><%= user.first_name %></strong> <%= user.last_name %></p>
+          <div class="contact d-flex justify-content-between">
+            <div>
+              <p class="district-style">Phone</p>
+              <p class="district-style"  style="margin-top: -10px">E-Mail</p>
+            </div>
+            <div>
+              <p class="card-district contact-details"><%= user.phone_number %></p>
+              <p class="card-district contact-details"  style="margin-top: -10px"><%= user.email %></p>
+            </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
