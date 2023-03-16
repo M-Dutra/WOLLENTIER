@@ -4,7 +4,11 @@
       <div class="d-flex align-items-center">
         <%= link_to "WOLLENTIER", root_path, class: "navbar-brand" %>
         <%= link_to "Jobs", offers_path, method: :get, class: "main-nav-link nav-spacing" %>
-        <%= link_to "Organizations", organizations_path, method: :get, class: "main-nav-link" %>
+        <% if current_user && current_user.organization? %>
+          <%= link_to "Volunteers", users_path, method: :get, class: "main-nav-link" %>
+        <% else %>
+          <%= link_to "Organizations", organizations_path, method: :get, class: "main-nav-link" %>
+        <% end %>
       </div>
         <%# <form class="d-flex" role="links"> %>
             <ul class="navbar-nav d-flex align-items-center">

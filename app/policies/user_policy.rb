@@ -1,9 +1,13 @@
 class UserPolicy < ApplicationPolicy
   class Scope < Scope
     # NOTE: Be explicit about which records you allow access to!
-    # def resolve
-    #   scope.all
-    # end
+    def resolve
+      if user.organization?
+        scope.where(role: "volunteer")
+      else
+        scope.where(role: "organization")
+      end
+    end
   end
 
   def profile?
@@ -17,5 +21,4 @@ class UserPolicy < ApplicationPolicy
   def update?
     user.volunteer?
   end
-
 end
