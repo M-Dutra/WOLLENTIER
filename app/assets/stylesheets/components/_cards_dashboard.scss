@@ -33,7 +33,7 @@
 
 .card-title {
   font-size: 18px;
-  color: #000000;
+  color: $w-dblue;
   text-decoration: none;
 
 }
@@ -78,9 +78,12 @@
 
 .card-body .card-offer-logo {
   position: absolute;
-  right: 24px;
-  top: 14px;
-  // width: 40px;
+  right: 26px;
+  top: 235px;
+  width: 72px;
+  height: 59px;
+  background-color: white;
+  object-fit: contain
 }
 
 .card-offer-logo-show {
@@ -100,12 +103,10 @@
   object-fit: contain;
 
 }
-
 .card-badge {
-  background-color: #d7f1ff;
-  border-radius: 0  150px 150px 0;
-  color: #119fee;
   font-weight: bold;
+  font-family: $headers-font;
+  font-size: 14px;
   margin-left: -1rem;
   width:65%;
   padding-left: 1rem;
@@ -114,6 +115,35 @@
   padding-top: 0.1rem;
   padding-bottom: 0.1rem;
   font-size-adjust:0.5;
+}
+
+.card-badge-community {
+  background-color: #d7f1ff;
+  border-radius: 0  150px 150px 0;
+  color: #119fee;
+  width:40%;
+}
+
+.card-badge-refugees {
+  background-color: #ccedda;
+  border-radius: 0  150px 150px 0;
+  color: #25bd67;
+  width: 33%;
+
+}
+
+.card-badge-seniors {
+  background-color: #ecedcc;
+  border-radius: 0  150px 150px 0;
+  color: #aaaf19;
+  width:30%;
+}
+
+.card-badge-kids {
+  background-color: #edccec;
+  border-radius: 0  150px 150px 0;
+  color: #aa21a5;
+  width: 23%;
 }
 
 .card-badge-mdutra {
@@ -218,4 +248,20 @@
   font-size: 14px !important;
   color: #839faf !important;
   margin: 0 !important;
+}
+
+.contact-details {
+  font-size: 14px !important;
+  color: $w-dblue !important;
+}
+
+.card-body-volunteer {
+  position: relative;
+  box-sizing: border-box;
+  height: 300px;
+}
+
+
+.contact {
+  width: 200px;
 }
