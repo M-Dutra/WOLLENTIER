@@ -16,6 +16,7 @@ class PagesController < ApplicationController
     if current_user.organization
       @offers = current_user.organization.offers
       @applications = current_user.organization.applications
+      @hired_volunteers = current_user.organization.applications.where(status: "accepted")
     else
       @applications = current_user.applications
     end
