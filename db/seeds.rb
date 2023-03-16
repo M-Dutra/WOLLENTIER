@@ -60,7 +60,8 @@ tulio = User.new(
   password: "123456",
   phone_number: "+49 30 187 324 980",
   interests: "Community",
-  role: "organization"
+  role: "organization",
+  profile_url: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fHByb2ZpbGV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
 )
 tulio.save!
 
