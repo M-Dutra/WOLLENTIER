@@ -139,10 +139,11 @@
   font-size: 12px;
   text-transform: uppercase;
   font-family: $headers-font;
-  margin: 20px 20px;
+  width:fit-content;
+  // margin: 20px 20px;
   padding-bottom: 1px;
   background-color: #d7f1ff;
-  color: #119fee;
+  color: #119fee !important;
 }
 
 .card-badge-community {

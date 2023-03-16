@@ -6,6 +6,25 @@
         <div class="col-8">
           <h1><%= @organization.name %></h1>
           <p class="job-description"><%= @organization.description %></p>
+          <div>
+            <h3 class="mt-5"><strong>Contact</strong></h3>
+            <div class="mb-4">
+              <p class="district-style">Phone</p>
+              <p class="card-district contact-details" style="margin-top: -10px"><%= @organization.user.phone_number %></p>
+            </div>
+            <div class="mb-4">
+              <p class="district-style">E-Mail</p>
+              <p class="card-district contact-details"  style="margin-top: -10px"><%= @organization.user.email %></p>
+            </div>
+            <div class="mb-4">
+              <p class="district-style">Website</p>
+              <p class="card-district contact-details"  style="margin-top: -10px"><%= @organization.website %></p>
+            </div>
+            <div>
+              <p class="district-style"  style="margin-top: -10px">Opening times</p>
+              <p class="card-district volunteer-interests-badge"  style="margin-top: -10px"><%= @organization.opening_time %></p>
+            </div>
+          </div>
           <!-- Button trigger modal -->
 
 
@@ -14,13 +33,9 @@
         <div class="col-4">
           <div class="d-flex flex-column mb-5">
             <div class="p-2 position-relative">
-              <img class="" src="<%= @organization.logo_url %>" />
-              <h3><strong><%= @organization.name %></strong></h3>
-              <p>Website: <%= @organization.website %></p>
-              <p>Adress: <%= @organization.location %></p>
-              <p>Phone Number: <%= @organization.user.phone_number %></p>
-              <p>Email: <%= @organization.user.email %></p>
-            </div>
+              <img class="organization-logo-show" src="<%= @organization.logo_url %>" />
+
+
             <div class="p-2">
               <div class="row gutters-sm" id="map"
                   style="width: 100%; height: 300px;"
@@ -34,6 +49,7 @@
         </div>
     </div>
   </div>
+</div>
 </div>
 
 

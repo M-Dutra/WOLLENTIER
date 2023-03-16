@@ -99,9 +99,9 @@ besher = User.new(
 besher.save!
 
 eli = User.new(
-  first_name: "Elisabeth",
-  last_name: "Messmer",
-  email: "eli@gmail.com",
+  first_name: "Katja",
+  last_name: "Dietrich",
+  email: "katja@gmail.com",
   password: "123456",
   phone_number: "+49 30 108 612 836",
   interests: ["Sports"],
