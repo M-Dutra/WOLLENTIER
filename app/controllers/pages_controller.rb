@@ -19,6 +19,7 @@ class PagesController < ApplicationController
       @hired_volunteers = current_user.organization.applications.where(status: "accepted")
     else
       @applications = current_user.applications
+      @hired_organizations = current_user.applications.where(status: "accepted")
     end
   end
 end
