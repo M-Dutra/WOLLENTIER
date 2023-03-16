@@ -10,7 +10,7 @@
         <%= application.message %>
       </div>
       <div class="modal-footer">
-        <% if application.status.nil? %>
+        <% if application.status.nil? && current_user.organization %>
           <div >
             <%= simple_form_for application do |f| %>
               <%= f.input :status, as: :hidden, input_html: { value: 'accepted'} %>
