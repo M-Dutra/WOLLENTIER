@@ -5,7 +5,6 @@ class OffersController < ApplicationController
   def index
     @offers = policy_scope(Offer).includes(:organization)
     if params[:query].present?
-      query = "%#{params[:query]}%"
       sql_query = <<~SQL
         offers.title @@ :query
         OR offers.description @@ :query
@@ -14,11 +13,9 @@ class OffersController < ApplicationController
         OR organizations.name @@ :query
         OR organizations.description @@ :query
       SQL
-      @offers = @offers.joins(:organization).where(sql_query, query:).or(@offers.where(category: params[:query]))
-      if @offers.empty? && params[:query].present?
-        @offers = Offer.all.includes(:organization)
-      end
+      @offers = @offers.where(category: params[:query])
     end
+    @offers = Offer.all.includes(:organization) if @offers.empty?
   end
 
   def show
