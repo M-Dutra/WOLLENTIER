@@ -21,6 +21,8 @@ export default class extends Controller {
       case 'Organizations':
         this.organizationsTarget.hidden = false;
         break;
+      default:
+        this.applicationsTarget.hidden = false;
     }
   }
 }

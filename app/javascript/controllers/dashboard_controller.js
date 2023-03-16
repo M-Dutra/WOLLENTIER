@@ -25,6 +25,8 @@ export default class extends Controller {
       case 'Volunteers':
         this.volunteersTarget.hidden = false;
         break;
+      default:
+        this.openjobsTarget.hidden = false;
     }
   }
 }
