@@ -4,69 +4,61 @@
   </div>
 </div>
 
-<div class="sub-nav">
-  <ul class="d-flex flex-row justify-content-start container align-items-center">
-    <li class="nav-link mt-3 me-5"><a>Open jobs</a></li>
-    <li class="nav-link mt-3 me-5"><a>Applications</a></li>
-    <li class="nav-link mt-3"><a>Volunteers</a></li>
-  </ul>
-</div>
-
-<div class="dash-content container">
-  <div class="open-jobs-container">
-    <div class="d-flex justify-content-between pt-3">
-      <div><h3>Open jobs</h3></div>
-      <div><%= link_to "Add offer", new_offer_path, class:"btn btn-primary" %></div>
-    </div>
-    <div class="row row-cols-12 row-cols-md-4 g-4 pt-3">
-      <% @offers.each do |offer| %>
-        <%= render partial: 'offers/card_offer', locals: { offer: offer}  %>
-      <% end %>
-    </div>
+<div data-controller="dashboard">
+  <div class="sub-nav">
+    <ul class="d-flex flex-row justify-content-start container align-items-center" data-action="click->dashboard#display">
+      <li class="nav-link mt-3 me-5" ><p>Open jobs</p></li>
+      <li class="nav-link mt-3 me-5"><p>Applications</p></li>
+      <li class="nav-link mt-3"><p>Volunteers</p></li>
+    </ul>
   </div>
 
-
-    <%# <div class="applications-container">
-      <div class="container"> %>
-  <h3 class="mt-4 mb-4">Applications for my job offers</h3>
-
-
-
-
-
-  <div class="applications-container">
-    <% @applications.each do |application| %>
-      <div class="application-container d-flex align-items-center justify-content-between">
-        <div class="d-flex align-items-center ms-3">
-          <div class="avatar-large" style="background-image: url(<%= application.user.profile_url %>)">
-            <img src="">
-          </div>
-          <p class="application-title ms-4"><%= application.title %></p>
-        </div>
-        <div class="d-flex align-items-center">
-          <p class="application-time me-5"><%= (application.created_at).strftime("%A, %d %b %Y %l:%M %p") %></p>
-          <div class="application-actions d-flex align-items-center">
-          <p class="application-tag-user application-tag-<%= application.status.nil? ? "pending": application.status.downcase %>"><%= application.status.nil? ? "Pending": application.status.downcase  %></p>
-          <button type="button" class="btn btn-secondary me-4" data-bs-toggle="modal" data-bs-target="#modal-<%= application.id %>">
-            Details
-          </button>
-        </div>
-        </div>
+  <div class="dash-content container">
+    <div class="open-jobs-container" data-dashboard-target="openjobs">
+      <div class="d-flex justify-content-between pt-3">
+        <h3>Open jobs</h3>
+        <%= link_to "Add offer", new_offer_path, class:"btn btn-primary" %>
       </div>
-    <%= render "shared/modal_app", application: application, applicant: application.id %>
-    <% end %>
-  </div>
-
-
-  <div class="volunteers-container">
-    <div><h3 class="mt-4 mb-2">Your volunteers</h3></div>
-    <div class="row row-cols-12 row-cols-md-4 g-4 pt-3">
-      <% @hired_volunteers.each do |application| %>
+      <div class="row row-cols-12 row-cols-md-4 g-4 pt-3">
+        <% @offers.each do |offer| %>
+          <%= render partial: 'offers/card_offer', locals: { offer: offer}  %>
+        <% end %>
+      </div>
+    </div>
 
 
 
-        <%= render partial: 'offers/volunteer_card', locals: { application: application}  %>
+    <div class="applications-container" data-dashboard-target="applications">
+      <h3 class="mt-4">Applications for my job offers</h3>
+      <% @applications.each do |application| %>
+        <div class="application-container d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center ms-3">
+            <div class="avatar-large" style="background-image: url(<%= application.user.profile_url %>)">
+            </div>
+            <h5 class="card-title ms-4"><%= application.title %></h5>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="application-time me-5"><%= (application.created_at).strftime("%A, %d %b %Y %l:%M %p") %></p>
+            <div class="application-actions d-flex align-items-center">
+            <p class="application-tag-user application-tag-<%= application.status.nil? ? "pending": application.status.downcase %>"><%= application.status.nil? ? "Pending": application.status.downcase  %></p>
+            <button type="button" class="btn btn-secondary me-4" data-bs-toggle="modal" data-bs-target="#modal-<%= application.id %>">
+              Details
+            </button>
+          </div>
+          </div>
+        </div>
+      <%= render "shared/modal_app", application: application, applicant: application.id %>
       <% end %>
+    </div>
+
+
+    <div class="volunteers-container" data-dashboard-target="volunteers">
+      <h3 class="mt-4 mb-2">Your volunteers</h3>
+      <div class="row row-cols-12 row-cols-md-4 g-4 pt-3">
+        <% @hired_volunteers.each do |application| %>
+          <%= render partial: 'offers/volunteer_card', locals: { application: application}  %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
