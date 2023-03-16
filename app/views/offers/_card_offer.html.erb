@@ -2,7 +2,7 @@
   <div class="card h-100 card-style" style="width: 18rem;">
     <%= link_to offer_path(offer) do %>
       <div class="card-body">
-        <div class="card-badge">
+        <div class="card-badge card-badge-<%= offer.category.downcase %>">
           <span><%= offer.category %></span>
         </div>
         <p class="card-district district-style"><%= offer.district %></p>

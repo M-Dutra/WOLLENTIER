@@ -34,7 +34,6 @@
         <div class="application-container d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center ms-3">
             <div class="avatar-large" style="background-image: url(<%= application.user.profile_url %>)">
-              <img src="">
             </div>
             <h5 class="card-title ms-4"><%= application.title %></h5>
           </div>
@@ -54,7 +53,12 @@
 
 
     <div class="volunteers-container" data-dashboard-target="volunteers">
-      <h3>Volunteers</h3>
+      <h3 class="mt-4 mb-2">Your volunteers</h3>
+      <div class="row row-cols-12 row-cols-md-4 g-4 pt-3">
+        <% @hired_volunteers.each do |application| %>
+          <%= render partial: 'offers/volunteer_card', locals: { application: application}  %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
